@@ -1,0 +1,47 @@
+.intro {
+  height: 600px;
+  position: relative;
+  z-index: 1;
+  background-image: url("/images/man2.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 500px;
+  //   background-position: 92% 120%;
+  background-position: 10% 120%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  .main_banner {
+    h1 {
+      position: relative;
+      z-index: 1;
+      padding: 8px 0;
+      margin: 0;
+      font-size: 35px;
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20px;
+        height: 100%;
+        z-index: -1;
+        background: $primary;
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 50%;
+      color: #848484;
+      line-height: 1.9;
+      font-size: 15px;
+    }
+  }
+}
