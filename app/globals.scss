@@ -152,8 +152,8 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     background: $primary;
     z-index: -1;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   &::before {
     content: "";
@@ -164,8 +164,8 @@ body::-webkit-scrollbar-thumb {
     right: 0;
     background: $primary;
     z-index: -1;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 
   &:hover::after,

@@ -1,9 +1,9 @@
-import styles from "./styles.module.scss"
+// import styles from "./styles.module.scss"
 
-const Counter = () => {
-  return (
-    <div>Counter</div>
-  )
-}
+// const Counter = () => {
+//   return (
+//     <div>Counter</div>
+//   )
+// }
 
-export default Counter
+// export default Counter

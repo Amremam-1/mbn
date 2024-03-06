@@ -1,0 +1,116 @@
+.ServicePackage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+  grid-template-rows: auto;
+  gap: 30px;
+  position: relative;
+  margin-top: -80px;
+  z-index: 100;
+  background: transparent;
+  padding-bottom: 50px;
+  .item {
+    padding: 40px;
+    background: $boxService;
+    cursor: pointer;
+
+    .features_box {
+      .icon {
+        height: 67px;
+        .icon_sv {
+          width: 45px;
+          height: 45px;
+          color: $primary;
+          cursor: pointer;
+        }
+      }
+
+      h3 {
+        margin-bottom: 0;
+        margin-top: 5px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .bar {
+        position: relative;
+        z-index: 1;
+        background: #f6941d;
+        width: 55px;
+        height: 3px;
+        margin-top: 7px;
+        margin-bottom: 20px;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          background: #fff;
+          animation: moveX 2s infinite linear; /* تحريك دائم في اتجاه x لمدة 2 ثانية بشكل متكرر */
+        }
+
+        &::after {
+          width: 4px;
+          top: 0;
+          right: 10px;
+        }
+
+        &::before {
+          width: 4px;
+          top: 0;
+          left: 30px;
+        }
+      }
+
+      @keyframes moveX {
+        0% {
+          transform: translateX(0); /* لا تحريك في البداية */
+        }
+        100% {
+          transform: translateX(
+            -50px
+          ); /* تحريك باتجاه اليمين بمقدار 50 بكسل في النهاية */
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .active {
+    background: $primary;
+    .features_box {
+      .icon {
+        .icon_sv {
+          color: #fff; /* لون الرمز عند التحديد */
+        }
+      }
+      h3 {
+        color: #fff;
+      }
+
+      .bar {
+        background: #fff;
+
+        &::after,
+        &::before {
+          background: $primary;
+        }
+      }
+      p {
+        color: #fff;
+      }
+    }
+  }
+}

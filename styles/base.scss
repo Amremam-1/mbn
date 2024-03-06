@@ -1,72 +1,72 @@
 $white: #fff;
 $black: #000;
-$black0AB: #000000AB;
-$black02: #021A2C;
+$black0AB: #000000ab;
+$black02: #021a2c;
 $black11: #111111;
 $black13: #131726;
-$black19: #191C1F;
+$black19: #191c1f;
 $black18: #181818;
-$black1C: #1C1C1C;
+$black1C: #1c1c1c;
 $black25: #252422;
 $black26: #263238;
 $black28: #282828;
-$black29: #292D32;
+$black29: #292d32;
 $black34: #344756;
-$black3E: #3E4958;
-$black40: #403D39;
-$black46: #464E57;
+$black3E: #3e4958;
+$black40: #403d39;
+$black46: #464e57;
 $black51: #515151;
 $black5A: #5a5a5a45;
-$black5F: #5F6C72;
+$black5F: #5f6c72;
 $black59: #595566;
 $black63: #636262;
 $black68: #686666;
 $black66: #666666;
 $black6C: #6c6c6c;
-$black77: #77878F;
+$black77: #77878f;
 $gray-79: #797979;
 $gray-8B: #8b96a5;
 $gray-8B8B: #8b8b8b;
-$gray-A5: #A5A5A5;
-$gray-A7: #A7A7A7;
-$gray-A9: #A9A9A9;
-$gray-AC: #ACACAC;
-$gray-ADA: #ADAFB3;
-$gray-AD: #ADB7BC;
-$gray-BA: #BABABA;
-$gray-BD: #BDBDBD;
+$gray-A5: #a5a5a5;
+$gray-A7: #a7a7a7;
+$gray-A9: #a9a9a9;
+$gray-AC: #acacac;
+$gray-ADA: #adafb3;
+$gray-AD: #adb7bc;
+$gray-BA: #bababa;
+$gray-BD: #bdbdbd;
 $gray-C0: #c0c0c0;
-$gray-C1: #C1C1C1;
+$gray-C1: #c1c1c1;
 $gray-CD: #cdcdcd;
-$gray-D3: #D3D3D3;
-$gray-D6: #D6D6D6;
-$gray-D9: #D9D9D9;
-$gray-DE: #DEE2E7;
+$gray-D3: #d3d3d3;
+$gray-D6: #d6d6d6;
+$gray-D9: #d9d9d9;
+$gray-DE: #dee2e7;
 $gray-D2: #d2d2d2;
-$gray-E0: #E0E0E0;
+$gray-E0: #e0e0e0;
 $gray-E7: #e7e7e7;
-$gray-EF: #EFF2F4;
+$gray-EF: #eff2f4;
 $gray-F2: #f2f2f2;
-$gray-F3: #F3F3F3;
-$gray-F4: #F4F4F4;
-$gray-F7: #F7FAFC;
-$gray-FC: #FCFEFE;
+$gray-F3: #f3f3f3;
+$gray-F4: #f4f4f4;
+$gray-F7: #f7fafc;
+$gray-FC: #fcfefe;
 $gray-FA: #fafafa;
-$blueE4: #E4E7E9;
-$yellow-FF: #FFDBB8;
-$yellow-FF9: #FF9017;
-$yellow-FE: #FEB103;
-$yellow-EB: #EBC80C;
+$blueE4: #e4e7e9;
+$yellow-FF: #ffdbb8;
+$yellow-FF9: #ff9017;
+$yellow-FE: #feb103;
+$yellow-EB: #ebc80c;
 $green-7D: #7dc796;
-$green-47: #47AD69;
-$green-51: #51A86C;
+$green-47: #47ad69;
+$green-51: #51a86c;
 $green-12: #12a28b;
-$limon-C0: #C0DB46;
+$limon-C0: #c0db46;
 $red-F3: #f34853;
 $red-F0: #f03441;
-$red-FF: #FF0010;
-$red-E4: #E4736D;
-$red-E8: #E8B6B4;
+$red-FF: #ff0010;
+$red-E4: #e4736d;
+$red-E8: #e8b6b4;
 $blue1F: #1fa299;
 $purple-39: #39007d;
 $purple-C1: #c13584;
@@ -78,8 +78,7 @@ $primary: #f6941d;
 $btn-bg: rgb(221, 198, 208, 0.39);
 $btn-bg-op: rgb(221, 198, 208, 1);
 
-
-$light-green: rgba(214, 248, 240, 0.50);
+$light-green: rgba(214, 248, 240, 0.5);
 $overflow-white: rgba(255, 255, 255, 0.6);
 $overflow-black: rgba(0, 0, 0, 0.1);
 
@@ -94,31 +93,29 @@ $shadow-2: 10px 24px 74px 0px rgba(0, 0, 0, 0.04);
 $shadow-3: 0px 1px 2px 0px rgba(56, 56, 56, 0.08);
 $shadow-4: 0px 1px 2px 0px rgba(255, 255, 255, 0.1);
 
-$shadow-15: 0 0 0 0.2rem rgba(0,123,255,.25);
-
+$shadow-15: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 
 $xxs-media: 370px;
 $xs-media: 450px;
 $sm-media: 576px;
 $md-media: 768px;
-$lg-media: 992px; 
+$lg-media: 992px;
 $xl-media: 1200px;
 $xxl-media: 1400px;
 
-$Roboto-font: 'Roboto', sans-serif;
-$Cairo-font: 'Cairo', sans-serif;
-$Poppins-font: 'Poppins', sans-serif;
-
+$Roboto-font: "Roboto", sans-serif;
+$Cairo-font: "Cairo", sans-serif;
+$Poppins-font: "Poppins", sans-serif;
 
 $blue-light1: #cacfe7;
-$blue-light: #BAC0DF;
+$blue-light: #bac0df;
 $gray-6b: #6b6f82;
 $gray-46: #464855;
-$gray-4A : #4A4A4A;
+$gray-4A: #4a4a4a;
 $gray-dc: #dcdcdc;
-$gray-E4: #E4E7ED;
-$bg-F4: #F4F5FA;
-$bg-ED: #EDEEF3;
+$gray-E4: #e4e7ed;
+$bg-F4: #f4f5fa;
+$bg-ED: #edeef3;
 $bg-red: #ff4961;
 $bg-green: #28d094;
 $purple-3b: #3b4781;
@@ -169,7 +166,7 @@ $purple-3b: #3b4781;
     to top,
     #f3e7e9 0%,
     #e3eeff 99%,
-    #e3eeff 100%,
+    #e3eeff 100%
   );
 }
 
@@ -181,3 +178,5 @@ $purple-3b: #3b4781;
 // -----------SASS MIXINS ---------------------------
 
 // ------------------- Amro --------------------------------------------
+
+$boxService: #f7f7ff;
