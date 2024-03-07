@@ -1,34 +1,33 @@
-.ServicePackage {
+.container {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
   grid-template-rows: auto;
   gap: 30px;
   position: relative;
   margin-top: -80px;
-  z-index: 100;
-  background: transparent;
   padding-bottom: 50px;
-  .item {
-    padding: 40px;
+  z-index: 100;
+
+  .box_one,
+  .box_three {
     background: $boxService;
     cursor: pointer;
+    transition: 0.5s;
+    position: relative;
 
-    .features_box {
+    .box_contant {
+      padding: 40px;
+
       .icon {
-        height: 67px;
-        .icon_sv {
-          width: 45px;
-          height: 45px;
-          color: $primary;
-          cursor: pointer;
-        }
-      }
-
-      h3 {
-        margin-bottom: 0;
-        margin-top: 5px;
-        -webkit-transition: 0.5s;
+        font-size: 45px;
+        color: $primary;
         transition: 0.5s;
+      }
+      h3 {
+        margin-top: 5px;
+        color: black;
         font-size: 22px;
         font-weight: 700;
       }
@@ -39,8 +38,11 @@
         background: #f6941d;
         width: 55px;
         height: 3px;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
         margin-top: 7px;
         margin-bottom: 20px;
+        overflow: hidden;
 
         &::after,
         &::before {
@@ -48,7 +50,7 @@
           position: absolute;
           height: 100%;
           background: #fff;
-          animation: moveX 2s infinite linear; /* تحريك دائم في اتجاه x لمدة 2 ثانية بشكل متكرر */
+          animation: moveX 2s infinite linear;
         }
 
         &::after {
@@ -62,16 +64,14 @@
           top: 0;
           left: 30px;
         }
-      }
 
-      @keyframes moveX {
-        0% {
-          transform: translateX(0); /* لا تحريك في البداية */
-        }
-        100% {
-          transform: translateX(
-            -50px
-          ); /* تحريك باتجاه اليمين بمقدار 50 بكسل في النهاية */
+        @keyframes moveX {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50px);
+          }
         }
       }
 
@@ -80,37 +80,163 @@
         -webkit-transition: 0.5s;
         transition: 0.5s;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        color: #848484;
+        line-height: 1.9;
+        margin-bottom: 15px;
+        margin-top: 0;
+        font-size: 15px;
       }
     }
+
+    &:hover {
+      background: $primary;
+
+      .box_contant {
+        .icon {
+          color: #fff;
+        }
+
+        h3 {
+          color: #fff;
+        }
+        .bar {
+          background: #fff;
+
+          &::after,
+          &::before {
+            background: $primary;
+          }
+        }
+
+        p {
+          color: #f0efef;
+        }
+      }
+    }
+
+    div {
+      .dot {
+        transform: rotate(90deg);
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+      }
+
+      .shape1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 1;
+        transition: 0.2s;
+      }
+      .shape2 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(10px);
+      }
+      .shape3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(10px);
+      }
+    }
+
+    &:hover .shape1 {
+      opacity: 1;
+      transform: matrix(10deg);
+    }
   }
+}
 
-  .active {
-    background: $primary;
-    .features_box {
-      .icon {
-        .icon_sv {
-          color: #fff; /* لون الرمز عند التحديد */
+.box_two {
+  background: $primary;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+
+  .box_contant {
+    padding: 40px;
+
+    .icon {
+      font-size: 45px;
+      color: #fff;
+      transition: 0.5s;
+    }
+    h3 {
+      margin-top: 5px;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .bar {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      width: 55px;
+      height: 3px;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      margin-top: 7px;
+      margin-bottom: 20px;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        background: $primary;
+        animation: moveX 2s infinite linear;
+      }
+
+      &::after {
+        width: 4px;
+        top: 0;
+        right: 10px;
+      }
+
+      &::before {
+        width: 4px;
+        top: 0;
+        left: 30px;
+      }
+
+      @keyframes moveX {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50px);
         }
       }
-      h3 {
-        color: #fff;
-      }
+    }
 
-      .bar {
-        background: #fff;
-
-        &::after,
-        &::before {
-          background: $primary;
-        }
-      }
-      p {
-        color: #fff;
-      }
+    p {
+      margin-bottom: 0;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #f0efef;
+      line-height: 1.9;
+      margin-bottom: 15px;
+      margin-top: 0;
+      font-size: 15px;
+    }
+  }
+  div {
+    .dot {
+      transform: rotate(90deg);
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
     }
   }
 }

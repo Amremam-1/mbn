@@ -1,19 +1,22 @@
-.intro {
-  height: 600px;
-  position: relative;
-  z-index: 1;
-  background-image: url("/images/man2.png");
-  // background-position: left;
-  background-repeat: no-repeat;
-  background-size: 500px;
-    // background-position: 92% 120%;
-  background-position: 10% 120%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .container {
+  max-width: 1200px;
+  margin: auto;
+  .intro {
+    height: 530px;
+    position: relative;
+    z-index: 1;
+    background-image: url("/images/man2.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: 92% 120%;
+    background-position: 10% 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .main_banner {
     h1 {
       position: relative;

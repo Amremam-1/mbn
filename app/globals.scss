@@ -178,3 +178,37 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
   }
 }
+
+.bar {
+  position: relative;
+  z-index: 1;
+  background: #f6941d;
+  width: 55px;
+  height: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: #fff;
+    animation: moveX 2s infinite linear;
+  }
+
+  &::after {
+    width: 4px;
+    top: 0;
+    right: 10px;
+  }
+
+  &::before {
+    width: 4px;
+    top: 0;
+    left: 30px;
+  }
+}

@@ -3,9 +3,9 @@ import Link from "next/link"
 
 const Intro = () => {
   return (
-    <div className={`${styles.intro} secContainer`}>
-      <div id="home" className={styles.banner}>
-        <div className={styles.container}>
+    <div className="secContainer">
+      <div className={styles.container}>
+        <div className={styles.intro}>
           <div className={styles.main_banner}>
             <h1>مجموعة ماهر بن نايف التجارية</h1>
             <p>

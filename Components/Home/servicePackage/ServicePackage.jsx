@@ -4,64 +4,134 @@ import styles from "./styles.module.scss"
 import { HiOutlineLightBulb } from "react-icons/hi"
 import { GiBullseye } from "react-icons/gi"
 import { TbWorldSearch } from "react-icons/tb"
+import Image from "next/image"
 import { useState } from "react"
 
-const Services = [
-  {
-    icon: HiOutlineLightBulb,
-    title: "الخدمات البرمجية",
-    subtitle:
-      "تصميم وبرمجة التطبيقات والموقع بأحدث التقنيات بأفضل الاسعار وبدعم فني مجاني",
-    imgDot: "/images/dot.png",
-    id: "01",
-  },
-  {
-    icon: GiBullseye,
-    title: "الخدمات الفنية",
-    subtitle:
-      "خدمات فنية متعددة من تصوير بأحدث الكاميرات ومونتاج وموشن جرافيك وهندسة صوتية وتصاميم بأحدث البرامج",
-    imgDot: "/images/dot.png",
-    id: "02",
-  },
-  {
-    icon: TbWorldSearch,
-    title: "الخدمات التسويقية",
-    subtitle:
-      "التسويق هو أساس أي مشروع لذالك لدينا امهر المسوقين بخبرات عالية ولدينا عدد كبير من مشاهير السوشيال ميديا للتسويق والإعلان",
-    imgDot: "/images/dot.png",
-    id: "03",
-  },
-]
-
 const ServicePackage = () => {
-  const [activeService, setActiveService] = useState("02")
+  const [isHovered, setIsHovered] = useState(null)
 
-  const handleActiveService = (serviceId) => {
-    setActiveService(serviceId)
-  }
   return (
-    <div className={`${styles.ServicePackage} secContainer`}>
-      {Services.map((item, index) => (
-        // eslint-disable-next-line react/jsx-key
+    <div className="secContainer">
+      <div className={styles.container}>
         <div
-          className={`${styles.item} ${
-            item.id === activeService ? styles.active : ""
-          }`}
-          key={index}
-          onClick={() => handleActiveService(item.id)}
+          className={styles.box_one}
+          onMouseEnter={() => setIsHovered("box_one")}
+          onMouseLeave={() => setIsHovered(null)}
         >
-          <div className={styles.features_box}>
-            <div className={styles.icon}>
-              <item.icon className={styles.icon_sv} />
-            </div>
-            <h3>{item.title}</h3>
+          <div className={styles.box_contant}>
+            <HiOutlineLightBulb className={styles.icon} />
+
+            <h3>الخدمات البرمجية</h3>
 
             <div className={styles.bar}></div>
 
-            <p>{item.subtitle}</p>
+            <p>
+              تصميم وبرمجة التطبيقات والموقع بأحدث التقنيات بأفضل الاسعار وبدعم
+              فني مجاني
+            </p>
+          </div>
+
+          <div>
+            <Image
+              src={
+                isHovered === "box_one"
+                  ? "/images/white-dot.png"
+                  : "/images/dot.png"
+              }
+              className={styles.dot}
+              alt=""
+              width={45}
+              height={45}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape2.svg"}
+              className={styles.shape1}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape2}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape3}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
           </div>
         </div>
-      ))}
+        <div className={styles.box_two}>
+          <div className={styles.box_contant}>
+            <GiBullseye className={styles.icon} />
+
+            <h3>الخدمات الفنية</h3>
+
+            <div className={styles.bar}></div>
+
+            <p>
+              خدمات فنية متعددة من تصوير بأحدث الكاميرات ومونتاج وموشن جرافيك
+              وهندسة صوتية وتصاميم بأحدث البرامج
+            </p>
+          </div>
+
+          <div>
+            <Image
+              src={"/images/white-dot.png"}
+              className={styles.dot}
+              alt=""
+              width={45}
+              height={45}
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div className={styles.box_three}>
+          <div
+            className={styles.box_contant}
+            onMouseEnter={() => setIsHovered("box_three")}
+            onMouseLeave={() => setIsHovered(null)}
+          >
+            <TbWorldSearch className={styles.icon} />
+
+            <h3>الخدمات التسويقية</h3>
+
+            <div className={styles.bar}></div>
+
+            <p>
+              التسويق هو أساس أي مشروع لذالك لدينا امهر المسوقين بخبرات عالية
+              ولدينا عدد كبير من مشاهير السوشيال ميديا للتسويق والإعلان
+            </p>
+          </div>
+          <div>
+            <Image
+              src={
+                isHovered === "box_three"
+                  ? "/images/white-dot.png"
+                  : "/images/dot.png"
+              }
+              className={styles.dot}
+              alt=""
+              width={45}
+              height={45}
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
