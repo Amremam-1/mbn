@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   grid-template-rows: auto;
-
+  margin-top: 40px;
   .single_services {
     position: relative;
     z-index: 1;
