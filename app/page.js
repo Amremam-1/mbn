@@ -14,7 +14,8 @@ export default function Home() {
       <Info />
       <BarLine />
       <ServiceContent />
-      {/* <Counter /> */}
+      <BarLine />
+      <Counter />
     </main>
   )
 }
