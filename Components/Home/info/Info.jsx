@@ -58,7 +58,9 @@ const Info = () => {
                 height={0}
                 sizes="100vw"
               />
-              <button className={`btn ${styles.contact}`}>تواصل معانا</button>
+              <button className={`btn ${styles.contact}`}>
+                معرفة المزيد عنا
+              </button>
             </Link>
           </div>
         </div>

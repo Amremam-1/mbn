@@ -3,6 +3,7 @@ import ServicePackage from "@/Components/Home/servicePackage/ServicePackage"
 import Counter from "@/Components/Home/Counter/Counter"
 import BarLine from "@/Components/Home/barLine/BarLine"
 import Info from "@/Components/Home/info/Info"
+import ServiceContent from "@/Components/Home/serviceContent/ServiceContent"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <BarLine />
       <Info />
       <BarLine />
+      <ServiceContent />
       {/* <Counter /> */}
     </main>
   )

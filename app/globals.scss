@@ -212,3 +212,25 @@ body::-webkit-scrollbar-thumb {
     left: 30px;
   }
 }
+
+.conTitle {
+  margin-bottom: 40px !important;
+
+  span {
+    margin-bottom: -5px;
+    color: #f6941d;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #000000;
+    font-weight: 500;
+    // font-family: "Poppins", sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,78 @@
+.container {
+  max-width: 1200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.uk_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-rows: auto;
+
+  .single_services {
+    position: relative;
+    z-index: 1;
+    background-color: #f9f9f9;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 65px 0 0 65px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 10px;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: #fff;
+        color: #f6941d;
+        // margin-left: 15px;
+
+        .icon {
+          font-size: 35px;
+        }
+      }
+
+      h3 {
+        margin: 0;
+        color: black;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+
+      .arrow {
+        font-size: 30px;
+        color: #bdbdbd;
+      }
+    }
+
+    &:hover {
+      background: $primary;
+
+      .item {
+        h3 {
+          color: #fff;
+        }
+        .arrow {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
