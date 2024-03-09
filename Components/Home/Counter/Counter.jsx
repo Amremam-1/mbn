@@ -1,4 +1,5 @@
 "use client"
+
 import styles from "./styles.module.scss"
 import { IoPeopleOutline } from "react-icons/io5"
 import { IoHeartOutline } from "react-icons/io5"
