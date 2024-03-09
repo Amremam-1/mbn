@@ -1,6 +1,7 @@
 "use client"
 
 import styles from "./styles.module.scss"
+import { useState, useEffect } from "react"
 import { IoPeopleOutline } from "react-icons/io5"
 import { IoHeartOutline } from "react-icons/io5"
 import { IoPersonOutline } from "react-icons/io5"
@@ -31,6 +32,27 @@ const counterContent = [
 ]
 
 const CounterPage = () => {
+  const [hasCounterStarted, setHasCounterStarted] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.querySelector(`.${styles.funfacts_area}`)
+      const rect = element.getBoundingClientRect()
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight
+      const isVisible = rect.top <= windowHeight && rect.bottom >= 0
+      if (isVisible && !hasCounterStarted) {
+        setHasCounterStarted(true)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    handleScroll()
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [hasCounterStarted])
+
   return (
     <section className={styles.funfacts_area}>
       <div className={styles.container}>
@@ -43,9 +65,9 @@ const CounterPage = () => {
 
               <div className={styles.theme}>
                 <h3>
-                  <CountUp start={0} end={item.count} />
+                  {hasCounterStarted && <CountUp start={0} end={item.count} />}
                 </h3>
-                {/* <h3>{item.count}</h3> */}
+                <h3>{item.count}</h3>
                 <p>{item.title}</p>
               </div>
             </div>
