@@ -183,7 +183,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   z-index: 1;
   background: #f6941d;
-  width: 55px;
+  width: 55px !important;
   height: 3px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -238,6 +238,6 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
-.react-multi-carousel-list{
+.react-multi-carousel-list {
   margin-top: 20px;
 }

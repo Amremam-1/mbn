@@ -81,7 +81,7 @@ const Opinions = () => {
             autoPlay={true}
             keyBoardControl={true}
             customTransition="transform 500ms ease-in-out"
-            autoPlaySpeed={10000}
+            autoPlaySpeed={8000}
           >
             {opinionsContent.map((opinion, index) => (
               <div key={index} className={styles.opinion}>
