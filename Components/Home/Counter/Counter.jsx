@@ -7,7 +7,7 @@ import { PiMedalLight } from "react-icons/pi"
 import CountUp from "react-countup"
 import { useState, useEffect } from "react"
 
-const counter = [
+const counterContent = [
   {
     title: "عميل",
     count: 2992,
@@ -56,7 +56,7 @@ const Counter = () => {
     <section className={styles.funfacts_area}>
       <div className={styles.container}>
         <div className={styles.uk_grid}>
-          {counter.map((item, index) => (
+          {counterContent.map((item, index) => (
             <div className={styles.item} key={index}>
               <span className={styles.parent}>
                 <item.icon className={styles.icon} />
