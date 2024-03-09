@@ -6,6 +6,10 @@ import Link from "next/link"
 import Image from "next/image"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import { TiSocialFacebook } from "react-icons/ti"
+import { SlSocialInstagram } from "react-icons/sl"
+import { FaLinkedinIn } from "react-icons/fa6"
+import { BsTwitter } from "react-icons/bs"
 
 const team = [
   {
@@ -47,6 +51,24 @@ const team = [
 ]
 
 const CompletedProjects = () => {
+  const carouselRef = useRef(null)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [activeButton, setActiveButton] = useState(1)
+
+  const toggle = (buttonIndex) => {
+    setActiveButton(activeButton === buttonIndex ? buttonIndex : buttonIndex)
+  }
+
+  const nextSlide = () => {
+    carouselRef.current.next()
+    setCurrentSlide((prevSlide) => prevSlide + 1)
+  }
+
+  const prevSlide = () => {
+    carouselRef.current.previous()
+    setCurrentSlide((prevSlide) => prevSlide - 1)
+  }
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -89,11 +111,29 @@ const CompletedProjects = () => {
             customTransition="transform 500ms ease-in-out"
             autoPlaySpeed={2000}
             className={styles.carousel}
+            ref={carouselRef}
+            afterChange={(previousSlide, currentSlide) =>
+              setCurrentSlide(currentSlide)
+            }
           >
             {team.map((item, index) => (
               // eslint-disable-next-line react/jsx-key
               <div className={styles.item} key={index}>
                 <div className={styles.single_team}>
+                  <ul className={styles.social}>
+                    <Link href="#">
+                      <TiSocialFacebook className={styles.icon} />
+                    </Link>
+                    <Link href="#">
+                      <FaLinkedinIn className={styles.icon} />
+                    </Link>
+                    <Link href="#">
+                      <BsTwitter className={styles.icon} />
+                    </Link>
+                    <Link href="#">
+                      <SlSocialInstagram className={styles.icon} />
+                    </Link>
+                  </ul>
                   <Image
                     src={item.presonImg}
                     alt=""
@@ -111,6 +151,28 @@ const CompletedProjects = () => {
               </div>
             ))}
           </Carousel>
+          <div className={styles.customNavigation}>
+            <button
+              onClick={() => {
+                nextSlide()
+                toggle(1)
+              }}
+            >
+              <span
+                className={activeButton === 1 ? `${styles.active}` : ""}
+              ></span>
+            </button>
+            <button
+              onClick={() => {
+                prevSlide()
+                toggle(2)
+              }}
+            >
+              <span
+                className={activeButton === 2 ? `${styles.active}` : ""}
+              ></span>
+            </button>
+          </div>
         </div>
       </div>
     </section>

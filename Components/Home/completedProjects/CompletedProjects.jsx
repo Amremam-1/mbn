@@ -48,6 +48,12 @@ const projects = [
 const CompletedProjects = () => {
   const carouselRef = useRef(null)
   const [currentSlide, setCurrentSlide] = useState(0)
+
+  const [activeButton, setActiveButton] = useState(1)
+
+  const toggle = (buttonIndex) => {
+    setActiveButton(activeButton === buttonIndex ? buttonIndex : buttonIndex)
+  }
   const nextSlide = () => {
     carouselRef.current.next()
     setCurrentSlide((prevIndex) => prevIndex + 1)
@@ -134,19 +140,24 @@ const CompletedProjects = () => {
           </Carousel>
 
           <div className={styles.customNavigation}>
-            <button onClick={prevSlide}>
+            <button
+              onClick={() => {
+                nextSlide()
+                toggle(1)
+              }}
+            >
               <span
-                style={{
-                  background: currentSlide === 0 ? "f6941d" : "",
-                }}
+                className={activeButton === 1 ? `${styles.active}` : ""}
               ></span>
             </button>
-            <button onClick={nextSlide}>
+            <button
+              onClick={() => {
+                prevSlide()
+                toggle(2)
+              }}
+            >
               <span
-                style={{
-                  background:
-                    currentSlide === projects.length - 1 ? "f6941d" : "",
-                }}
+                className={activeButton === 2 ? `${styles.active}` : ""}
               ></span>
             </button>
           </div>
