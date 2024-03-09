@@ -5,6 +5,7 @@ import Info from "@/Components/Home/info/Info"
 import ServiceContent from "@/Components/Home/serviceContent/ServiceContent"
 import CounterPage from "@/Components/Home/counterpage/CounterPage"
 import CompletedProjects from "@/Components/Home/completedProjects/CompletedProjects"
+import Opinions from "@/Components/Home/OpinionsCustomers/Opinions"
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
       <BarLine />
       <CounterPage />
       <CompletedProjects />
+      <BarLine />
+      <Opinions />
     </main>
   )
 }
