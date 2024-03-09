@@ -31,7 +31,7 @@ const counterContent = [
   },
 ]
 
-const Counter = () => {
+const CounterPage = () => {
   const [hasCounterStarted, setHasCounterStarted] = useState(false)
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Counter = () => {
     }
 
     window.addEventListener("scroll", handleScroll)
-    handleScroll() // Check visibility initially
+    handleScroll()
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
@@ -76,4 +76,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default CounterPage
