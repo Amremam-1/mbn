@@ -67,7 +67,6 @@ const CounterPage = () => {
                 <h3>
                   {hasCounterStarted && <CountUp start={0} end={item.count} />}
                 </h3>
-                <h3>{item.count}</h3>
                 <p>{item.title}</p>
               </div>
             </div>
