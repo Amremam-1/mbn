@@ -45,7 +45,6 @@
     background-repeat: no-repeat;
     background-position: top; /* Initial position */
     /* Adjust the following line to move the image by a certain number of pixels */
-    background-position: top 20px;
 
     .item {
       flex: 1;
@@ -100,4 +99,5 @@
 
 .itemWithMargin {
   margin-top: 40px;
+  margin-right: 0;
 }
