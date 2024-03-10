@@ -7,7 +7,7 @@ import CounterPage from "@/Components/Home/counterpage/CounterPage"
 import CompletedProjects from "@/Components/Home/completedProjects/CompletedProjects"
 import Opinions from "@/Components/Home/OpinionsCustomers/Opinions"
 import OurTeam from "@/Components/Home/ourTeam/OurTeam"
-
+import Mechanism from "@/Components/Home/mechanism/Mechanism"
 
 export default function Home() {
   return (
@@ -24,6 +24,7 @@ export default function Home() {
       <BarLine />
       <Opinions />
       <OurTeam />
+      <Mechanism />
     </main>
   )
 }
