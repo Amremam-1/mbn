@@ -36,9 +36,10 @@ const Info = () => {
             src={"/images/bg.jpg"}
             alt=""
             className={styles.img_main}
-            width={600}
-            height={400}
+            width={0}
+            height={0}
             sizes="100vw"
+            loading="lazy"
           />
           <Image
             src={"/images/1.png"}

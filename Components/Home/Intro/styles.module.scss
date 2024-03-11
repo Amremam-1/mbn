@@ -24,7 +24,12 @@
     }
 
     @media only screen and (max-width: 767px) {
+      background-position: 10% 100%;
       background-size: 50%;
+    }
+    @media only screen and (max-width: 375px) {
+      background-position: 10% 100%;
+      background-size: 60%;
     }
   }
 
@@ -36,7 +41,9 @@
       margin: 0;
       font-size: 35px;
       font-weight: 700;
-
+      @media (max-width: 375px) {
+        font-size: 25px;
+      }
       &::before {
         content: "";
         position: absolute;
