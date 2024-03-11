@@ -36,12 +36,16 @@ const OurPartners = () => {
       items: 6,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      breakpoint: { max: 1024, min: 768 },
+      items: 4,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+      breakpoint: { max: 768, min: 576 },
+      items: 3,
+    },
+    smmobile: {
+      breakpoint: { max: 576, min: 0 },
+      items: 2,
     },
   }
   return (

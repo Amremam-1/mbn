@@ -74,11 +74,11 @@ const CompletedProjects = () => {
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 767, min: 560 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 560, min: 0 },
       items: 1,
     },
   }
@@ -121,8 +121,8 @@ const CompletedProjects = () => {
                       src={item.image}
                       alt=""
                       className={styles.pro_img}
-                      width={100}
-                      height={100}
+                      width={0}
+                      height={0}
                       sizes="100vw"
                       loading="lazy"
                     />

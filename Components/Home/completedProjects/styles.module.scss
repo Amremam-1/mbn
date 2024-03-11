@@ -21,13 +21,21 @@
     }
 
     .item {
-      width: 285px;
       .single_project {
         height: 100%;
+        width: 100%;
         margin-right: 20px;
         display: flex;
         flex-direction: column;
         cursor: pointer;
+
+        @media (max-width: 767px) {
+          margin-right: 0;
+        }
+
+        @media (max-width: 561px) {
+          margin-right: 20px;
+        }
 
         .project_img {
           width: 100%;
@@ -36,11 +44,10 @@
 
           .pro_img {
             transition: 0.5s;
-            max-width: 100%;
             width: 100%;
+            object-fit: cover;
             height: auto !important;
             display: block;
-            object-fit: cover;
           }
         }
 
@@ -137,5 +144,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    display: none;
   }
 }

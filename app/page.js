@@ -13,7 +13,7 @@ import OurPartners from "@/Components/Home/ourPartners/OurPartners"
 export default function Home() {
   return (
     <main>
-      {/* <Intro />
+      <Intro />
       <ServicePackage />
       <BarLine />
       <Info />
@@ -21,10 +21,10 @@ export default function Home() {
       <ServiceContent />
       <BarLine />
       <CounterPage />
+      {/* <OurTeam /> */}
       <CompletedProjects />
       <BarLine />
       <Opinions />
-      <OurTeam /> */}
       <Mechanism />
       <OurPartners />
     </main>

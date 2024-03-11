@@ -58,6 +58,7 @@ const Opinions = () => {
             width={600}
             height={400}
             sizes="100vw"
+            loading="lazy"
           />
           <Image
             src={"/images/1.png"}
@@ -66,6 +67,7 @@ const Opinions = () => {
             width={0}
             height={0}
             sizes="100vw"
+            loading="lazy"
           />
         </div>
         <div className={styles.right_info}>

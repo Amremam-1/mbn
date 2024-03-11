@@ -1,7 +1,7 @@
 "use client"
 
 import styles from "./styles.module.scss"
-import Link from "next/link"
+
 import { MdCall } from "react-icons/md"
 import { IoSettingsSharp } from "react-icons/io5"
 import { AiOutlineShoppingCart } from "react-icons/ai"
@@ -62,6 +62,17 @@ const Mechanism = () => {
           <div className="bar"></div>
         </div>
 
+        <div className={styles.arrow}>
+          <Image
+            src={"/images/arrow_ar.png"}
+            alt=""
+            width={0}
+            height={0}
+            className={styles.arrowImg}
+            sizes="100vw"
+            loading="lazy"
+          />
+        </div>
         <div className={styles.uk_grid}>
           {mechanism_work.map((item, index) => (
             <div

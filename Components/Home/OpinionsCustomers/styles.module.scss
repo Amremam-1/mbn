@@ -6,6 +6,9 @@
   padding-bottom: 50px;
   margin: auto;
 
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
   .left_info {
     // flex: 1;
     width: 50%;
@@ -13,6 +16,13 @@
     cursor: pointer;
     transition: 0.5s;
 
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+
+    .img_main {
+      width: 100%;
+    }
     .img_three {
       position: absolute;
       top: -15%;
@@ -20,6 +30,13 @@
       width: 111px;
       height: 111px;
       animation: moveX 3s infinite linear;
+
+      @media (max-width: 991px) {
+        top: -8%;
+      }
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
 
     &:hover {
@@ -43,7 +60,9 @@
 .right_info {
   width: 50%;
   height: 100%;
-
+  @media (max-width: 991px) {
+    width: 100%;
+  }
   .opinion {
     display: flex;
     text-align: right;
@@ -51,6 +70,7 @@
     height: 100%;
     margin-right: 10px;
     margin-left: 10px;
+
     div {
       display: flex;
       justify-content: end;
