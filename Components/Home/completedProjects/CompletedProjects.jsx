@@ -73,6 +73,10 @@ const CompletedProjects = () => {
       breakpoint: { max: 3000, min: 1024 },
       items: 4,
     },
+    Tdesktop: {
+      breakpoint: { max: 1024, min: 767 },
+      items: 3,
+    },
     tablet: {
       breakpoint: { max: 767, min: 560 },
       items: 2,
