@@ -23,7 +23,7 @@ export default function Home() {
       <CompletedProjects />
       <BarLine />
       <Opinions />
-      <OurTeam />
+      {/* <OurTeam /> */}
       <Mechanism />
     </main>
   )
