@@ -8,11 +8,12 @@ import CompletedProjects from "@/Components/Home/completedProjects/CompletedProj
 import Opinions from "@/Components/Home/OpinionsCustomers/Opinions"
 import OurTeam from "@/Components/Home/ourTeam/OurTeam"
 import Mechanism from "@/Components/Home/mechanism/Mechanism"
+import OurPartners from "@/Components/Home/ourPartners/OurPartners"
 
 export default function Home() {
   return (
     <main>
-      <Intro />
+      {/* <Intro />
       <ServicePackage />
       <BarLine />
       <Info />
@@ -23,8 +24,9 @@ export default function Home() {
       <CompletedProjects />
       <BarLine />
       <Opinions />
-      {/* <OurTeam /> */}
+      <OurTeam /> */}
       <Mechanism />
+      <OurPartners />
     </main>
   )
 }
