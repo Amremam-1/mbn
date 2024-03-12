@@ -36,6 +36,16 @@
             width: 100%;
             @include transition(0.3s);
             position: relative;
+
+            &.active {
+              color: $primary;
+
+              &::before {
+                right: -50%;
+                width: 100%;
+                background-color: $primary;
+              }
+            }
             &::before {
               content: "";
               position: absolute;

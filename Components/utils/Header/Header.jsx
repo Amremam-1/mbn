@@ -1,8 +1,12 @@
-import Image from "next/image";
-import styles from "./styles.module.scss";
-import Link from "next/link";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { IoAppsOutline } from "react-icons/io5";
+"use client"
+
+import Image from "next/image"
+import styles from "./styles.module.scss"
+import Link from "next/link"
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
+import { IoAppsOutline } from "react-icons/io5"
+import { useState } from "react"
+
 const navList = [
   {
     id: "01",
@@ -14,7 +18,7 @@ const navList = [
     id: "02",
     titleAr: "من نحن",
     titleEn: "",
-    link: "/",
+    link: "/about",
   },
   {
     id: "03",
@@ -46,9 +50,14 @@ const navList = [
     titleEn: "",
     link: "/",
   },
-];
+]
 
 const Header = () => {
+  const [activeLink, setActiveLink] = useState("")
+
+  const handleItemClick = (idTitle) => () => {
+    setActiveLink(activeLink === idTitle ? idTitle : "")
+  }
   return (
     <header className={styles.header}>
       <div className={`${styles.container} secContainer`}>
@@ -64,8 +73,17 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             {navList?.map((item, index) => (
-              <li className={styles.navItem} key={index}>
-                <Link className={styles.navLink} href={item.link}>
+              <li
+                className={styles.navItem}
+                key={index}
+                onClick={() => handleItemClick(item.id)}
+              >
+                <Link
+                  className={`${styles.navLink} ${
+                    activeLink === item.id ? styles.active : ""
+                  }`}
+                  href={item.link}
+                >
                   {item.titleAr}
                 </Link>
               </li>
@@ -86,7 +104,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
