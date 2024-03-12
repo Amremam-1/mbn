@@ -55,6 +55,15 @@ const ServicePackage = () => {
             />
 
             <Image
+              src={"/images/shape2.svg"}
+              className={styles.shape11}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
               src={"/images/shape1.svg"}
               className={styles.shape2}
               alt=""
@@ -66,6 +75,39 @@ const ServicePackage = () => {
             <Image
               src={"/images/shape3.svg"}
               className={styles.shape3}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape33}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape333}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape4}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape5}
               alt=""
               width={25}
               height={25}
@@ -94,6 +136,74 @@ const ServicePackage = () => {
               alt=""
               width={45}
               height={45}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape2.svg"}
+              className={styles.shape1}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape2.svg"}
+              className={styles.shape11}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape2}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape3}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape33}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape333}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape4}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape5}
+              alt=""
+              width={25}
+              height={25}
               loading="lazy"
             />
           </div>
@@ -127,6 +237,74 @@ const ServicePackage = () => {
               alt=""
               width={45}
               height={45}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape2.svg"}
+              className={styles.shape1}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape2.svg"}
+              className={styles.shape11}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape2}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape3}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape33}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+            <Image
+              src={"/images/shape3.svg"}
+              className={styles.shape333}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape4}
+              alt=""
+              width={25}
+              height={25}
+              loading="lazy"
+            />
+
+            <Image
+              src={"/images/shape1.svg"}
+              className={styles.shape5}
+              alt=""
+              width={25}
+              height={25}
               loading="lazy"
             />
           </div>

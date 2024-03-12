@@ -20,6 +20,7 @@
     gap: 20px;
   }
 
+  // style boxOne & boxTwo
   .box_one,
   .box_three {
     background: $boxService;
@@ -27,6 +28,7 @@
     transition: 0.5s;
     position: relative;
 
+    // boxContent
     .box_contant {
       padding: 40px;
 
@@ -84,20 +86,71 @@
           }
         }
       }
+    }
 
-      p {
-        margin-bottom: 0;
-        -webkit-transition: 0.5s;
-        transition: 0.5s;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: #848484;
-        line-height: 1.9;
-        margin-bottom: 15px;
-        margin-top: 0;
-        font-size: 15px;
+    div {
+      .dot {
+        transform: rotate(90deg);
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+      }
+      .shape1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .shape11 {
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      .shape2 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      .shape3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s;
+        opacity: 0;
+      }
+      .shape33 {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transition: 0.3s;
+        opacity: 0;
+      }
+      .shape333 {
+        position: absolute;
+        bottom: 50%;
+        right: 0;
+        transition: 0.3s;
+        opacity: 0;
+      }
+      .shape4 {
+        position: absolute;
+        bottom: 0;
+        transition: 0.3s;
+        opacity: 0;
+      }
+      .shape5 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+        opacity: 0;
       }
     }
 
@@ -125,40 +178,42 @@
           color: #f0efef;
         }
       }
-    }
 
-    div {
-      .dot {
-        transform: rotate(90deg);
-        position: absolute;
-        bottom: 5px;
-        left: 10px;
-      }
+      div {
+        .shape1 {
+          transform: translate(21px, -21px);
+          opacity: 1;
+        }
+        .shape11 {
+          transform: translateX(-27px);
+          opacity: 1;
+        }
+        .shape2 {
+          transform: translateY(-25px);
+          opacity: 1;
+        }
 
-      .shape1 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        opacity: 1;
-        transition: 0.2s;
+        .shape3 {
+          transform: translate(-17px, -17px);
+          opacity: 1;
+        }
+        .shape33 {
+          transform: translateY(25px);
+          opacity: 1;
+        }
+        .shape333 {
+          transform: translateX(27px);
+          opacity: 1;
+        }
+        .shape4 {
+          transform: translate(22px, 22px);
+          opacity: 1;
+        }
+        .shape5 {
+          transform: translate(-22px, 22px);
+          opacity: 1;
+        }
       }
-      .shape2 {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(10px);
-      }
-      .shape3 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateX(10px);
-      }
-    }
-
-    &:hover .shape1 {
-      opacity: 1;
-      transform: matrix(10deg);
     }
   }
 }
@@ -247,6 +302,102 @@
       position: absolute;
       bottom: 5px;
       left: 10px;
+    }
+
+    .shape1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .shape11 {
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .shape2 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .shape3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .shape33 {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .shape333 {
+      position: absolute;
+      bottom: 50%;
+      right: 0;
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .shape4 {
+      position: absolute;
+      bottom: 0;
+      transition: 0.3s;
+      opacity: 0;
+    }
+    .shape5 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    div {
+      .shape1 {
+        transform: translate(21px, -21px);
+        opacity: 1;
+      }
+      .shape11 {
+        transform: translateX(-27px);
+        opacity: 1;
+      }
+      .shape2 {
+        transform: translateY(-25px);
+        opacity: 1;
+      }
+
+      .shape3 {
+        transform: translate(-17px, -17px);
+        opacity: 1;
+      }
+      .shape33 {
+        transform: translateY(25px);
+        opacity: 1;
+      }
+
+      .shape333 {
+        transform: translateX(27px);
+        opacity: 1;
+      }
+      .shape4 {
+        transform: translate(22px, 22px);
+        opacity: 1;
+      }
+      .shape5 {
+        transform: translate(-22px, 22px);
+        opacity: 1;
+      }
     }
   }
 }

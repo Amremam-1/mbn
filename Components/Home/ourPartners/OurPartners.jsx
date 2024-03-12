@@ -81,6 +81,7 @@ const OurPartners = () => {
           ))}
         </Carousel>
       </div>
+      <div className={styles.br_line}></div>
     </div>
   )
 }

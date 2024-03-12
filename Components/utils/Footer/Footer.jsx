@@ -6,6 +6,7 @@ import { IoLocationOutline } from "react-icons/io5"
 import { AiOutlineMail } from "react-icons/ai"
 import { IoIosPhonePortrait } from "react-icons/io"
 import { IoIosArrowUp } from "react-icons/io"
+import BarLine from "@/Components/Home/barLine/BarLine"
 
 const services = [
   {
@@ -67,7 +68,7 @@ const usefulLinks = [
 ]
 
 const Footer = () => {
-  const date = new Date().getFullYear();
+  const date = new Date().getFullYear()
 
   const goTopScroll = () => {
     window.scrollTo({
@@ -93,37 +94,37 @@ const Footer = () => {
 
         <div className={styles.servcies}>
           {services.map((item, index) => (
-              <div className={styles.servcies_content} key={index}>
-                <h3 className={styles.title}>{item.title}</h3>
+            <div className={styles.servcies_content} key={index}>
+              <h3 className={styles.title}>{item.title}</h3>
 
-                <div className={styles.links}>
-                  <ul className={styles.nav}>
-                    {item.links.map((link, index) => (
-                      <li key={index}>
-                        <a href={link.href}>{link.display}</a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className={styles.links}>
+                <ul className={styles.nav}>
+                  {item.links.map((link, index) => (
+                    <li key={index}>
+                      <a href={link.href}>{link.display}</a>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            </div>
           ))}
         </div>
 
         <div className={styles.usefulLinks}>
           {usefulLinks.map((item, index) => (
-              <div className={styles.usefulLinks_content} key={index}>
-                <h3 className={styles.title}>{item.title}</h3>
+            <div className={styles.usefulLinks_content} key={index}>
+              <h3 className={styles.title}>{item.title}</h3>
 
-                <div className={styles.links}>
-                  <ul className={styles.nav}>
-                    {item.links.map((link, index) => (
-                      <li key={index}>
-                        <a href={link.href}>{link.display}</a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className={styles.links}>
+                <ul className={styles.nav}>
+                  {item.links.map((link, index) => (
+                    <li key={index}>
+                      <a href={link.href}>{link.display}</a>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            </div>
           ))}
         </div>
 
