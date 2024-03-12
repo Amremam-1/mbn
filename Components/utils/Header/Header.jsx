@@ -30,7 +30,7 @@ const navList = [
     id: "04",
     titleAr: "أعمالنا",
     titleEn: "",
-    link: "/",
+    link: "/project",
   },
   {
     id: "05",

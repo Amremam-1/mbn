@@ -1,0 +1,33 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .wrapper {
+    .filtering_btns {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .toolbar {
+      .navigation {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 10px;
+        min-width: 120px;
+        font-weight: 600;
+        background: #f8f8f8;
+        color: black;
+        margin-left: 5px;
+
+        &.active {
+          background: $primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
