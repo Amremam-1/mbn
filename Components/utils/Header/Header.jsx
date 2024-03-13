@@ -48,7 +48,7 @@ const navList = [
     id: "07",
     titleAr: "إتصل بنا",
     titleEn: "",
-    link: "/",
+    link: "/contact",
   },
 ]
 
