@@ -186,14 +186,15 @@ const bar = [
 const GridItem = ({ img }) => (
   <>
     <Image
+      className={styles.img}
       src={img.img}
       alt={img.title}
-      width={270}
-      height={270}
+      width={0}
+      height={0}
       sizes="100vw"
       loading="lazy"
     />
-    <div>
+    <div className={styles.content}>
       <h3>{img.title}</h3>
       <span>{img.subTitle}</span>
     </div>
@@ -208,37 +209,39 @@ const Title = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={`${styles.Title} conTitle`}>
-        <h2>أعمالنا المنجزة</h2>
-        <div className="bar"></div>
-      </div>
-
-      <div className={styles.wrapper}>
-        <div className={styles.filtering_btns}>
-          <div className={styles.toolbar}>
-            {bar.map((item) => (
-              <button
-                onClick={() => handleBtn(item.id)}
-                className={`${styles.navigation} ${
-                  activeBtn === item.id ? styles.active : ""
-                }`}
-                key={item.btnbar}
-              >
-                <span>{item.btnbar}</span>
-              </button>
-            ))}
-          </div>
+    <div className="secContainer">
+      <div className={styles.container}>
+        <div className={`${styles.Title} conTitle`}>
+          <h2>أعمالنا المنجزة</h2>
+          <div className="bar"></div>
         </div>
 
-        <div className={styles.uk_grid}>
-          {projectContent
-            .filter((item) => activeBtn === "0" || item.id === activeBtn)
-            .map((item) => (
-              <div key={item.title}>
-                <GridItem img={item} />
-              </div>
-            ))}
+        <div className={styles.wrapper}>
+          <div className={styles.filtering_btns}>
+            <div className={styles.toolbar}>
+              {bar.map((item) => (
+                <button
+                  onClick={() => handleBtn(item.id)}
+                  className={`${styles.navigation} ${
+                    activeBtn === item.id ? styles.active : ""
+                  }`}
+                  key={item.btnbar}
+                >
+                  <span>{item.btnbar}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.uk_grid}>
+            {projectContent
+              .filter((item) => activeBtn === "0" || item.id === activeBtn)
+              .map((item) => (
+                <div key={item.title} className={styles.main}>
+                  <GridItem img={item} />
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </div>
