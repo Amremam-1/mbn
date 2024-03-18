@@ -38,13 +38,12 @@
             position: relative;
 
             &.active {
-              color: $primary;
-
-              &::before {
-                right: -50%;
-                width: 100%;
-                background-color: $primary;
-              }
+              color: $primary !important;
+            }
+            &::before {
+              right: -50%;
+              width: 100%;
+              background-color: $primary;
             }
             &::before {
               content: "";
@@ -56,6 +55,12 @@
               height: 2px;
               background-color: transparent;
               @include transition(0.4s);
+            }
+
+            &.active::before {
+              background: $primary !important;
+              width: 100%;
+              right: -50%;
             }
             @media (max-width: $lg-media) {
               font-size: 14px;
@@ -90,6 +95,60 @@
             font-size: 20px;
           }
         }
+      }
+    }
+  }
+}
+
+// style Drop menu
+
+.DropMenu {
+  position: absolute;
+  top: 47px;
+  right: 43%;
+  margin-top: 15px;
+  z-index: 1020;
+  box-sizing: border-box;
+  min-width: 210px;
+  padding: 15px 20px;
+  background: #fff;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  opacity: 0;
+
+  &.show {
+    opacity: 1;
+  }
+
+  div {
+    margin-bottom: 10px;
+
+    .navmenu {
+      width: 100%;
+      color: black;
+      font-size: 18px;
+      margin-bottom: 15px;
+      padding-right: 8px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 0;
+        opacity: 0;
+        background: $primary; /* assuming $primary is defined elsewhere */
+        top: 0;
+        right: 0;
+        margin-left: -5px;
+        transition: 0.5s;
+      }
+
+      &:hover::after {
+        height: 90%;
+        opacity: 1;
       }
     }
   }
