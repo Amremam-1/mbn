@@ -1,11 +1,11 @@
 "use client"
-import Image from "next/image";
-import styles from "./styles.module.scss";
-import Link from "next/link";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { IoAppsOutline } from "react-icons/io5";
-import { useState } from "react";
-import DropMenu from "./DropMenu";
+import Image from "next/image"
+import styles from "./styles.module.scss"
+import Link from "next/link"
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
+import { IoAppsOutline } from "react-icons/io5"
+import { useState } from "react"
+import DropMenu from "./DropMenu"
 
 const navList = [
   {
@@ -57,29 +57,29 @@ const navList = [
     link: "/contact",
     showMenu: false,
   },
-];
+]
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState("");
-  const [navItems, setNavItems] = useState(navList);
+  const [activeLink, setActiveLink] = useState("")
+  const [navItems, setNavItems] = useState(navList)
 
   const handleItemClick = (idTitle) => () => {
-    setActiveLink(activeLink === idTitle ? "" : idTitle);
-  };
+    setActiveLink(activeLink === idTitle ? "" : idTitle)
+  }
 
   const handleMouseEnter = (id) => {
     const updatedNavItems = navItems.map((item) =>
       item.id === id ? { ...item, showMenu: true } : item
-    );
-    setNavItems(updatedNavItems);
-  };
+    )
+    setNavItems(updatedNavItems)
+  }
 
   const handleMouseLeave = (id) => {
     const updatedNavItems = navItems.map((item) =>
       item.id === id ? { ...item, showMenu: false } : item
-    );
-    setNavItems(updatedNavItems);
-  };
+    )
+    setNavItems(updatedNavItems)
+  }
 
   return (
     <header className={styles.header}>
@@ -130,7 +130,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
