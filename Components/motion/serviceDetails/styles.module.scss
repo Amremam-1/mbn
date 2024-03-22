@@ -121,20 +121,17 @@
       }
     }
     .inner {
-      border: 1px solid red;
       width: 70%;
     }
 
     .services_images_slider {
       width: 100%;
-      overflow: hidden; /* Hide overflow images */
+      overflow: hidden;
     }
 
     .image {
-      height: 450px;
+      max-height: 350px;
       width: 100%;
-      border: 1px solid red;
-      object-fit: cover;
     }
   }
 }
