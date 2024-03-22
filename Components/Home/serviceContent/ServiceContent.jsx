@@ -15,41 +15,49 @@ const Content = [
     title: "موشن جرافيك",
     icon: IoColorFilterOutline,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/motion",
   },
   {
     title: "تطبيقات ومواقع",
     icon: MdOutlineLaptopMac,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/apps",
   },
   {
     title: "تسويق ومشاهير",
     icon: HiOutlineMegaphone,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/marketing",
   },
   {
     title: "خدمات الانتاج الفني",
     icon: HiOutlineFilm,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/art",
   },
   {
     title: "تصوير المنتجات",
     icon: IoCameraOutline,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/product",
   },
   {
     title: "دراسة المشاريع التقنية",
     icon: HiOutlinePresentationChartBar,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/technique",
   },
   {
     title: "فاست كارت",
     icon: TiShoppingCart,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/fastCart",
   },
   {
     title: "إداره سوشيال ميديا",
     icon: MdOutlineSettingsSuggest,
     arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/management",
   },
 ]
 
@@ -66,17 +74,17 @@ const ServiceContent = () => {
         <div className={styles.uk_grid}>
           {Content.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
-            <div className={styles.single_services} key={index}>
-              <div className={styles.item}>
-                <span>
-                  <item.icon className={styles.icon} />
-                </span>
-                <h3>{item.title}</h3>
-                <Link href={""}>
+            <Link href={item.link}>
+              <div className={styles.single_services} key={index}>
+                <div className={styles.item}>
+                  <span>
+                    <item.icon className={styles.icon} />
+                  </span>
+                  <h3>{item.title}</h3>
                   <item.arrow className={styles.arrow} />
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

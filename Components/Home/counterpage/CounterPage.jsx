@@ -37,10 +37,10 @@ const CounterPage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const element = document.querySelector(`.${styles.funfacts_area}`)
-      const rect = element.getBoundingClientRect()
+      const rect = element?.getBoundingClientRect()
       const windowHeight =
         window.innerHeight || document.documentElement.clientHeight
-      const isVisible = rect.top <= windowHeight && rect.bottom >= 0
+      const isVisible = rect?.top <= windowHeight && rect?.bottom >= 0
       if (isVisible && !hasCounterStarted) {
         setHasCounterStarted(true)
       }

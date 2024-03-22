@@ -18,6 +18,8 @@
 
   "dependencies": {
 
+    "@types/react-responsive": "^8.0.8",
+
     "axios": "^1.6.7",
 
     "formik": "^2.4.5",
