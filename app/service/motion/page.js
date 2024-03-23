@@ -1,5 +1,7 @@
 import ServiceDetail from "@/Components/motion/serviceDetails/ServiceDetail"
 import PageHead from "@/Components/utils/PageHead/PageHead"
+import BarLine from "@/Components/Home/barLine/BarLine"
+import BoxService from "@/Components/motion/servicesBoxs/BoxService"
 
 export default function Motion() {
   const linksList = [
@@ -21,6 +23,8 @@ export default function Motion() {
     <main>
       <PageHead pageTitle="خدماتنا" links={linksList} />
       <ServiceDetail />
+      <BarLine />
+      <BoxService />
     </main>
   )
 }

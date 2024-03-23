@@ -7,7 +7,7 @@ import { IoSearchSharp } from "react-icons/io5"
 import { HiOutlineArrowNarrowLeft } from "react-icons/hi"
 import { useState } from "react"
 import Carousel from "react-multi-carousel"
-
+import { IoCheckmark } from "react-icons/io5"
 import "react-multi-carousel/lib/styles.css"
 import Image from "next/image"
 
@@ -153,6 +153,7 @@ const ServiceDetail = () => {
                 autoPlay={true}
                 keyBoardControl={true}
                 autoPlaySpeed={2000}
+                showDots={true}
                 itemClass="carousel-item"
               >
                 {sliderImages.map((item, index) => (
@@ -171,6 +172,21 @@ const ServiceDetail = () => {
                 ))}
               </Carousel>
             </div>
+
+            <ul className={styles.services_features_list}>
+              <li>
+                <IoCheckmark className={styles.check} />
+                تنفيذ العمل
+              </li>
+              <li>
+                <IoCheckmark className={styles.check} />
+                كتابة السيناريو
+              </li>
+              <li>
+                <IoCheckmark className={styles.check} />
+                صناعة الفكرة
+              </li>
+            </ul>
           </div>
         </div>
       </div>
