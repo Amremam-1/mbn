@@ -51,7 +51,7 @@
           display: flex;
           flex-direction: column;
           background-color: #f9f9f9;
-          padding: 20px 15px;
+          padding: 20px;
           -webkit-transition: 0.5s;
           transition: 0.5s;
           z-index: 1;
@@ -79,7 +79,7 @@
             margin: 0;
             -webkit-transition: 0.5s;
             transition: 0.5s;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #000000;
             line-height: 1.4;
@@ -88,6 +88,7 @@
           ul {
             margin: 8px 0 0;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -99,13 +100,15 @@
               transition: 0.5s;
               color: #848484;
               position: relative;
+              font-size: 14px;
+              margin-bottom: 5px;
             }
 
             .line {
-              &::before {
+              &::after {
                 content: "";
                 position: absolute;
-                left: -10px;
+                right: -10px;
                 top: 5px;
                 height: 15px;
                 width: 2px;
@@ -131,12 +134,52 @@
               color: #fff;
             }
 
-            .line::before {
+            .line::after {
               background: #fff;
             }
           }
         }
       }
+    }
+  }
+}
+.br_line {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  width: 3px;
+  background: #f6941d;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+  top: 30px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: black;
+    animation: moveY 2s infinite linear;
+  }
+
+  &::after {
+    height: 4px;
+    top: 10px;
+  }
+  &::before {
+    height: 4px;
+    top: 20px;
+  }
+
+  @keyframes moveY {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(50px);
     }
   }
 }

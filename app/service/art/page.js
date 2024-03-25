@@ -1,6 +1,8 @@
+import MotionProjects from "@/Components/Art/projects-of-motion/MotionProjects"
 import ServiceDetail from "@/Components/Art/serviceDetails/ServiceDetail"
+import BoxService from "@/Components/Art/servicesBoxs/BoxService"
 import BarLine from "@/Components/Home/barLine/BarLine"
-import BoxService from "@/Components/apps/servicesBoxs/BoxService"
+
 import PageHead from "@/Components/utils/PageHead/PageHead"
 
 export default function Art() {
@@ -25,6 +27,7 @@ export default function Art() {
       <ServiceDetail />
       <BarLine />
       <BoxService />
+      <MotionProjects />
     </main>
   )
 }
