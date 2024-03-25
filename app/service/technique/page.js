@@ -3,6 +3,7 @@ import PageHead from "@/Components/utils/PageHead/PageHead"
 import BarLine from "@/Components/Home/barLine/BarLine"
 import BoxService from "@/Components/motion/servicesBoxs/BoxService"
 import MotionProjects from "@/Components/motion/projects-of-motion/MotionProjects"
+import Pricing from "@/Components/motion/pricing/Pricing"
 
 export default function Technique() {
   const linksList = [
@@ -28,6 +29,7 @@ export default function Technique() {
       <BoxService />
       <MotionProjects />
       <BarLine />
+      <Pricing />
     </main>
   )
 }
