@@ -6,6 +6,7 @@
   .wrapper {
     display: flex;
     flex-wrap: wrap;
+
     @media (max-width: 1130px) {
       justify-content: space-between;
     }
@@ -101,21 +102,21 @@
               position: relative;
             }
 
-            .line {
-              &::before {
-                content: "";
-                position: absolute;
-                left: -10px;
-                top: 5px;
-                height: 15px;
-                width: 2px;
-                background: #848484;
-                -webkit-transform: rotate(10deg);
-                transform: rotate(10deg);
-                -webkit-transition: 0.5s;
-                transition: 0.5s;
-              }
-            }
+            // .line {
+            //   &::before {
+            //     content: "";
+            //     position: absolute;
+            //     left: -10px;
+            //     top: 5px;
+            //     height: 15px;
+            //     width: 2px;
+            //     background: #848484;
+            //     -webkit-transform: rotate(10deg);
+            //     transform: rotate(10deg);
+            //     -webkit-transition: 0.5s;
+            //     transition: 0.5s;
+            //   }
+            // }
           }
         }
 

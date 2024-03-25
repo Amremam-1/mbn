@@ -1,6 +1,7 @@
 import ServiceDetail from "@/Components/apps/serviceDetails/ServiceDetail"
 import PageHead from "@/Components/utils/PageHead/PageHead"
 import BarLine from "@/Components/Home/barLine/BarLine"
+import MotionProjects from "@/Components/apps/projects-of-motion/MotionProjects"
 import BoxService from "@/Components/apps/servicesBoxs/BoxService"
 
 export default function Apps() {
@@ -25,6 +26,7 @@ export default function Apps() {
       <ServiceDetail />
       <BarLine />
       <BoxService />
+      <MotionProjects />
     </main>
   )
 }
