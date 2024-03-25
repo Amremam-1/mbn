@@ -203,6 +203,7 @@ const MotionProjects = () => {
           ))}
         </div>
       </div>
+      <div className={styles.br_line}></div>
     </div>
   )
 }

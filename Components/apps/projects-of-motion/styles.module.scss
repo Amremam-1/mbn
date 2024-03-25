@@ -52,12 +52,13 @@
           display: flex;
           flex-direction: column;
           background-color: #f9f9f9;
-          padding: 20px 15px;
+          padding: 18px 12px;
           -webkit-transition: 0.5s;
           transition: 0.5s;
           z-index: 1;
           position: relative;
           width: 100%;
+          min-height: 110px;
           overflow: hidden;
 
           &::before {
@@ -80,7 +81,7 @@
             margin: 0;
             -webkit-transition: 0.5s;
             transition: 0.5s;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             color: #000000;
             line-height: 1.4;
@@ -138,6 +139,47 @@
           }
         }
       }
+    }
+  }
+}
+
+.br_line {
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  width: 3px;
+  background: #f6941d;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+  top: 30px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: black;
+    animation: moveY 2s infinite linear;
+  }
+
+  &::after {
+    height: 4px;
+    top: 10px;
+  }
+  &::before {
+    height: 4px;
+    top: 20px;
+  }
+
+  @keyframes moveY {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(50px);
     }
   }
 }
