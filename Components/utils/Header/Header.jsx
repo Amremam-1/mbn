@@ -4,7 +4,7 @@ import styles from "./styles.module.scss"
 import Link from "next/link"
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
 import { IoAppsOutline } from "react-icons/io5"
-import { useState } from "react"
+import { useState , useEffect} from "react"
 import DropMenu from "./DropMenu"
 
 const navList = [
@@ -45,9 +45,9 @@ const navList = [
   },
   {
     id: "06",
-    titleAr: "الأسعار",
+    titleAr: "فريق العمل",
     titleEn: "",
-    link: "/",
+    link: "/team",
     showMenu: false,
   },
   {
@@ -62,6 +62,25 @@ const navList = [
 const Header = () => {
   const [activeLink, setActiveLink] = useState("")
   const [navItems, setNavItems] = useState(navList)
+
+  const [scrollHeader, setScrollHeader] = useState("")
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY
+
+    if (scrollPosition > 1) {
+      setScrollHeader(styles.whiteBackground)
+    } else {
+      setScrollHeader("")
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const handleItemClick = (idTitle) => () => {
     setActiveLink(activeLink === idTitle ? "" : idTitle)
@@ -82,7 +101,7 @@ const Header = () => {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${scrollHeader}`}>
       <div className={`${styles.container} secContainer`}>
         <div className={styles.logo}>
           <Image
