@@ -86,6 +86,21 @@
             }
           }
         }
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      .navBar {
+        display: none;
+        @media (max-width: 991px) {
+          display: block;
+        }
+        .menu {
+          color: #615c5d;
+          font-size: 30px;
+        }
       }
     }
     .btns {
@@ -166,3 +181,4 @@
     }
   }
 }
+// navBar

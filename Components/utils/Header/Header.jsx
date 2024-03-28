@@ -4,8 +4,9 @@ import styles from "./styles.module.scss"
 import Link from "next/link"
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
 import { IoAppsOutline } from "react-icons/io5"
-import { useState , useEffect} from "react"
+import { useState, useEffect } from "react"
 import DropMenu from "./DropMenu"
+import { VscMenu } from "react-icons/vsc"
 
 const navList = [
   {
@@ -64,6 +65,12 @@ const Header = () => {
   const [navItems, setNavItems] = useState(navList)
 
   const [scrollHeader, setScrollHeader] = useState("")
+
+  const [isNavBarOpen, setIsNavBarOpen] = useState(false)
+
+  const toggleNavBar = () => {
+    setIsNavBarOpen(!isNavBarOpen)
+  }
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY
@@ -134,6 +141,10 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
+          <div className={styles.navBar}>
+            <VscMenu className={styles.menu} />
+          </div>
         </nav>
         <div className={styles.btns}>
           <div className={styles.modes}>
