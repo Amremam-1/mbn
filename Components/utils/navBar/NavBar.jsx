@@ -3,7 +3,7 @@
 import Link from "next/link"
 import styles from "./styles.module.scss"
 import { AiOutlineClose } from "react-icons/ai"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const navList = [
   {
@@ -57,10 +57,26 @@ const navList = [
   },
 ]
 
-const NavBar = () => {
+const NavBar = ({ isOpen }) => {
+  const [activeLink, setActiveLink] = useState("")
+
+  const [isMenuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen)
+  }
+
+  useEffect(() => {
+    setMenuOpen(isOpen)
+  }, [isOpen])
+
+  const handleItemClick = (idTitle) => () => {
+    setActiveLink(activeLink === idTitle ? "" : idTitle)
+  }
+
   return (
-    <div className={styles.navBar}>
-      <button className={styles.close}>
+    <div className={`${styles.navBar} ${isMenuOpen ? styles.open : ""}`}>
+      <button className={styles.close} onClick={toggleMenu}>
         <AiOutlineClose className={styles.iconClose} />
       </button>
 
@@ -68,7 +84,16 @@ const NavBar = () => {
         <ul className={styles.navList}>
           {navList.map((item) => (
             <li className={styles.navItem} key={item.id}>
-              <Link className={styles.navLink} href={item.link}>
+              <Link
+                className={`${styles.navLink} ${
+                  activeLink === item.id ? styles.active : ""
+                }`}
+                href={item.link}
+                onClick={() => {
+                  handleItemClick(item.id)
+                  toggleMenu()
+                }}
+              >
                 {item.titleAr}
               </Link>
               {/* {item.id === "03" && <DropMenu show={item.showMenu} />} */}

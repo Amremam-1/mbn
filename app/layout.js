@@ -2,7 +2,6 @@ import Header from "@/Components/utils/Header/Header"
 import "./globals.scss"
 import { Inter, Cairo, Poppins } from "next/font/google"
 import Footer from "@/Components/utils/Footer/Footer"
-import NavBar from "@/Components/Home/navBar/NavBar"
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -21,7 +20,6 @@ export default function RootLayout({ children }) {
     <html lang="ar" dir="rtl">
       <body className={cairo.className}>
         <Header />
-        <NavBar />
         {children}
         <Footer />
       </body>

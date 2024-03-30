@@ -7,6 +7,7 @@ import { IoAppsOutline } from "react-icons/io5"
 import { useState, useEffect } from "react"
 import DropMenu from "./DropMenu"
 import { VscMenu } from "react-icons/vsc"
+import NavBar from "../navBar/NavBar"
 
 const navList = [
   {
@@ -66,10 +67,10 @@ const Header = () => {
 
   const [scrollHeader, setScrollHeader] = useState("")
 
-  const [isNavBarOpen, setIsNavBarOpen] = useState(false)
+  const [isSideBarOpen, setSideBarOpen] = useState(false)
 
-  const toggleNavBar = () => {
-    setIsNavBarOpen(!isNavBarOpen)
+  const toggleSideBar = () => {
+    setSideBarOpen(!isSideBarOpen)
   }
 
   const handleScroll = () => {
@@ -108,58 +109,62 @@ const Header = () => {
   }
 
   return (
-    <header className={`${styles.header} ${scrollHeader}`}>
-      <div className={`${styles.container} secContainer`}>
-        <div className={styles.logo}>
-          <Image
-            className={styles.logoImg}
-            src="/images/logo.png"
-            alt="logo"
-            width={100}
-            height={55}
-          />
-        </div>
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            {navItems.map((item) => (
-              <li
-                className={styles.navItem}
-                key={item.id}
-                onMouseEnter={() => handleMouseEnter(item.id)}
-                onMouseLeave={() => handleMouseLeave(item.id)}
-              >
-                <Link
-                  className={`${styles.navLink} ${
-                    activeLink === item.id ? styles.active : ""
-                  }`}
-                  href={item.link}
-                  onClick={handleItemClick(item.id)}
+    <>
+      <header className={`${styles.header} ${scrollHeader}`}>
+        <div className={`${styles.container} secContainer`}>
+          <div className={styles.logo}>
+            <Image
+              className={styles.logoImg}
+              src="/images/logo.png"
+              alt="logo"
+              width={100}
+              height={55}
+            />
+          </div>
+          <nav className={styles.nav}>
+            <ul className={styles.navList}>
+              {navItems.map((item) => (
+                <li
+                  className={styles.navItem}
+                  key={item.id}
+                  onMouseEnter={() => handleMouseEnter(item.id)}
+                  onMouseLeave={() => handleMouseLeave(item.id)}
                 >
-                  {item.titleAr}
-                </Link>
-                {item.id === "03" && <DropMenu show={item.showMenu} />}
-              </li>
-            ))}
-          </ul>
+                  <Link
+                    className={`${styles.navLink} ${
+                      activeLink === item.id ? styles.active : ""
+                    }`}
+                    href={item.link}
+                    onClick={handleItemClick(item.id)}
+                  >
+                    {item.titleAr}
+                  </Link>
+                  {item.id === "03" && <DropMenu show={item.showMenu} />}
+                </li>
+              ))}
+            </ul>
 
-          <div className={styles.navBar}>
-            <VscMenu className={styles.menu} />
-          </div>
-        </nav>
-        <div className={styles.btns}>
-          <div className={styles.modes}>
-            <button className={styles.lightModeBtn}>
-              <MdOutlineLightMode className={styles.lightModeIcon} />
-            </button>
-          </div>
-          <div className={styles.apps}>
-            <button className={styles.appsBtn}>
-              <IoAppsOutline className={styles.appsIcon} />
-            </button>
+            <div className={styles.navBar} onClick={toggleSideBar}>
+              <VscMenu className={styles.menu} />
+            </div>
+          </nav>
+          <div className={styles.btns}>
+            <div className={styles.modes}>
+              <button className={styles.lightModeBtn}>
+                <MdOutlineLightMode className={styles.lightModeIcon} />
+              </button>
+            </div>
+            <div className={styles.apps}>
+              <button className={styles.appsBtn}>
+                <IoAppsOutline className={styles.appsIcon} />
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <NavBar isOpen={isSideBarOpen}/>
+    </>
   )
 }
 
