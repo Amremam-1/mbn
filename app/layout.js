@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={cairo.className}>
+      <body className={`${cairo.className} dark:bg-medium`}>
         <Header />
         {children}
         <Footer />

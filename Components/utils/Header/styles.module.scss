@@ -118,8 +118,11 @@
       }
       .apps {
         .appsBtn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           .appsIcon {
-            font-size: 20px;
+            font-size: 23px;
           }
         }
 
@@ -203,8 +206,8 @@
 
 .DropMenu {
   position: absolute;
-  top: 47px;
-  right: 43%;
+  top: 46px;
+  right: 40%;
   margin-top: 8px;
   z-index: 1020;
   min-width: 210px;

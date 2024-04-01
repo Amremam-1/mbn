@@ -2,12 +2,12 @@
 import Image from "next/image"
 import styles from "./styles.module.scss"
 import Link from "next/link"
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
 import { IoAppsOutline } from "react-icons/io5"
 import { useState, useEffect } from "react"
 import DropMenu from "./DropMenu"
 import { VscMenu } from "react-icons/vsc"
 import NavBar from "../navBar/NavBar"
+import ThemeToggle from "../Theme/ThemeToggle"
 
 const navList = [
   {
@@ -120,7 +120,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${scrollHeader}`}>
+      <header className={`${styles.header} ${scrollHeader} dark:bg-dark`}>
         <div className={`${styles.container} secContainer`}>
           <div className={styles.logo}>
             <Image
@@ -135,7 +135,7 @@ const Header = () => {
             <ul className={styles.navList}>
               {navItems.map((item) => (
                 <li
-                  className={styles.navItem}
+                  className={`${styles.navItem} dark:text-white`}
                   key={item.id}
                   onMouseEnter={() => handleMouseEnter(item.id)}
                   onMouseLeave={() => handleMouseLeave(item.id)}
@@ -160,12 +160,13 @@ const Header = () => {
           </nav>
           <div className={styles.btns}>
             <div className={styles.modes}>
-              <button className={styles.lightModeBtn}>
+              {/* <button className={styles.lightModeBtn}>
                 <MdOutlineLightMode className={styles.lightModeIcon} />
-              </button>
+              </button> */}
+              <ThemeToggle />
             </div>
             <div className={styles.apps} onClick={handleDropApps}>
-              <button className={styles.appsBtn}>
+              <button className={`${styles.appsBtn} dark:text-white`}>
                 <IoAppsOutline className={styles.appsIcon} />
               </button>
 
