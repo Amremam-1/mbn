@@ -120,7 +120,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${scrollHeader} dark:bg-dark`}>
+      <header className={`${styles.header} ${scrollHeader} `}>
         <div className={`${styles.container} secContainer`}>
           <div className={styles.logo}>
             <Image
@@ -135,7 +135,7 @@ const Header = () => {
             <ul className={styles.navList}>
               {navItems.map((item) => (
                 <li
-                  className={`${styles.navItem} dark:text-white`}
+                  className={`${styles.navItem}`}
                   key={item.id}
                   onMouseEnter={() => handleMouseEnter(item.id)}
                   onMouseLeave={() => handleMouseLeave(item.id)}

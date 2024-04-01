@@ -9,11 +9,12 @@ const Intro = () => {
           <div className={styles.intro}>
             <div className={`${styles.main_banner} dark:text-white`}>
               <h1>مجموعة ماهر بن نايف التجارية</h1>
-              <p className="dark:text-white">
+              <p>
                 نقدم لكم خدماتنا التقنية والفنية والتسويقية من أمهر الكوادر
                 الشابه لفروعنا في المملكة العربية السعودية وجمهورية مصر العربية
                 وماليزيا وهدفنا هو تقديم كل ماهو جديد وعصري لخدمة عملائنا
               </p>
+
               <Link href={""}>
                 <button className={`btn ${styles.contact}`}>تواصل معانا</button>
               </Link>
