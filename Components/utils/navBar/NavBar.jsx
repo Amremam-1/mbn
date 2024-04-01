@@ -6,6 +6,58 @@ import { AiOutlineClose } from "react-icons/ai"
 import { useEffect, useState } from "react"
 import { IoMdArrowDropdown } from "react-icons/io"
 import { IoMdArrowDropup } from "react-icons/io"
+import DropMenu from "../Header/DropMenu"
+
+const navLinks = [
+  {
+    id: "01",
+    titleAr: "موشن جرافيك",
+    titleEn: "",
+    link: "/service/motion",
+  },
+  {
+    id: "02",
+    titleAr: "تطبيقات ومواقع",
+    titleEn: "",
+    link: "/service/apps",
+  },
+  {
+    id: "03",
+    titleAr: "تسويق ومشاهير",
+    titleEn: "",
+    link: "/service/marketing",
+  },
+  {
+    id: "04",
+    titleAr: "خدمات الانتاج الفني",
+    titleEn: "",
+    link: "/service/art",
+  },
+  {
+    id: "05",
+    titleAr: "تصوير منتجات",
+    titleEn: "",
+    link: "/service/product",
+  },
+  {
+    id: "06",
+    titleAr: "دراسة المشاريع التقنية",
+    titleEn: "",
+    link: "/service/technique",
+  },
+  {
+    id: "07",
+    titleAr: "فاست كارت",
+    titleEn: "",
+    link: "/service/fastCart",
+  },
+  {
+    id: "08",
+    titleAr: "إدارة المشاريع ميديا",
+    titleEn: "",
+    link: "/service/management",
+  },
+]
 
 const navList = [
   {
@@ -111,14 +163,30 @@ const NavBar = ({ isOpen }) => {
                 }}
               >
                 {item.titleAr}
+
+                {item.id === "03" &&
+                  (dropMenu === "03" ? (
+                    <>
+                      <item.icon2 className={styles.icon} />
+                    </>
+                  ) : (
+                    <item.icon className={styles.icon} />
+                  ))}
               </Link>
 
-              {item.id === "03" &&
-                (dropMenu === "03" ? (
-                  <item.icon2 className={styles.icon} />
-                ) : (
-                  <item.icon className={styles.icon} />
-                ))}
+              {dropMenu === "03" && item.id === "03" ? (
+                <div className={styles.services}>
+                  {navLinks.map((item) => (
+                    <div key={item.id}>
+                      <Link href={item.link} className={styles.navmenu}>
+                        {item.titleAr}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                ""
+              )}
             </li>
           ))}
         </ul>
