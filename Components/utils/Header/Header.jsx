@@ -69,10 +69,19 @@ const Header = () => {
 
   const [isSideBarOpen, setSideBarOpen] = useState(false)
 
+  const [dropApps, setDropApps] = useState(false)
+
+  // function show dropMenu App
+  const handleDropApps = () => {
+    setDropApps(!dropApps)
+  }
+
+  // function sidebar
   const toggleSideBar = () => {
     setSideBarOpen(!isSideBarOpen)
   }
 
+  // function scroll
   const handleScroll = () => {
     const scrollPosition = window.scrollY
 
@@ -90,6 +99,7 @@ const Header = () => {
     }
   }, [])
 
+  // functions about click links
   const handleItemClick = (idTitle) => () => {
     setActiveLink(activeLink === idTitle ? "" : idTitle)
   }
@@ -154,16 +164,76 @@ const Header = () => {
                 <MdOutlineLightMode className={styles.lightModeIcon} />
               </button>
             </div>
-            <div className={styles.apps}>
+            <div className={styles.apps} onClick={handleDropApps}>
               <button className={styles.appsBtn}>
                 <IoAppsOutline className={styles.appsIcon} />
               </button>
+
+              {dropApps && (
+                <div className={styles.drop_bottom_left}>
+                  <div className={styles.uk_card}>
+                    <Link
+                      href={"https://www.d2020.net/last_version/"}
+                      className={styles.single_app}
+                    >
+                      <div className={styles.app_img}>
+                        <Image
+                          src={"/images/d2020.png"}
+                          alt=""
+                          className={styles.img}
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                        />
+                      </div>
+
+                      <span>D2020</span>
+                    </Link>
+
+                    <Link
+                      href={"https://noo9.net/"}
+                      className={styles.single_app}
+                    >
+                      <div className={styles.app_img}>
+                        <Image
+                          src={"/images/half.png"}
+                          alt=""
+                          className={styles.img}
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                        />
+                      </div>
+
+                      <span>Half</span>
+                    </Link>
+
+                    <Link
+                      href={"https://fastcart.vercel.app/en"}
+                      className={styles.single_app}
+                    >
+                      <div className={styles.app_img}>
+                        <Image
+                          src={"/images/fast.png"}
+                          alt=""
+                          className={styles.img}
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                        />
+                      </div>
+
+                      <span>Fast Cart</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </header>
 
-      <NavBar isOpen={isSideBarOpen}/>
+      <NavBar isOpen={isSideBarOpen} />
     </>
   )
 }

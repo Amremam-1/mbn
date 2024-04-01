@@ -43,10 +43,12 @@
         font-weight: 700;
         text-transform: uppercase;
         padding: 10px 0;
-        display: block;
+        display: flex;
+        align-items: center;
+        width: fit-content;
 
         .navLink {
-          width: 100%;
+          // width: 100%;
           @include transition(0.3s);
           position: relative;
           display: block;
@@ -62,9 +64,14 @@
           z-index: 1;
           font-size: 17px;
           font-weight: 600;
+
+          &.active {
+            color: $primary !important;
+          }
+          
           &::before {
-            right: -17%;
-            width: 30%;
+            right: -49%;
+            width: 100%;
             background-color: $primary;
           }
           &::before {
@@ -81,19 +88,16 @@
 
           &.active::before {
             background: $primary !important;
-            width: 30%;
-            right: -17%;
+            right: -49%;
+            width: 100%;
           }
         }
 
-        &:hover {
-          .navLink {
-            &::before {
-              right: -17%;
-              width: 30%;
-              background-color: #f6941d;
-            }
-          }
+        .icon {
+          color: #fff;
+          opacity: 0.7;
+          margin-inline-start: 4px;
+          font-size: 18px;
         }
       }
     }

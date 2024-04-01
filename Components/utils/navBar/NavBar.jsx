@@ -4,6 +4,8 @@ import Link from "next/link"
 import styles from "./styles.module.scss"
 import { AiOutlineClose } from "react-icons/ai"
 import { useEffect, useState } from "react"
+import { IoMdArrowDropdown } from "react-icons/io"
+import { IoMdArrowDropup } from "react-icons/io"
 
 const navList = [
   {
@@ -24,8 +26,9 @@ const navList = [
     id: "03",
     titleAr: "خدماتنا",
     titleEn: "",
-    link: "/",
-    // showMenu: false,
+    link: "",
+    icon: IoMdArrowDropdown,
+    icon2: IoMdArrowDropup,
   },
   {
     id: "04",
@@ -58,7 +61,14 @@ const navList = [
 ]
 
 const NavBar = ({ isOpen }) => {
+  //function change linkColor
   const [activeLink, setActiveLink] = useState("")
+
+  const handleItemClick = (idTitle) => {
+    setActiveLink(activeLink === idTitle ? "" : idTitle)
+  }
+
+  // functikon open sideBar
 
   const [isMenuOpen, setMenuOpen] = useState(false)
 
@@ -70,8 +80,11 @@ const NavBar = ({ isOpen }) => {
     setMenuOpen(isOpen)
   }, [isOpen])
 
-  const handleItemClick = (idTitle) => () => {
-    setActiveLink(activeLink === idTitle ? "" : idTitle)
+  // function change icon arrow
+  const [dropMenu, setDropMenu] = useState()
+
+  const handleDropMenu = (id) => {
+    setDropMenu(dropMenu === id ? "" : id)
   }
 
   return (
@@ -90,13 +103,22 @@ const NavBar = ({ isOpen }) => {
                 }`}
                 href={item.link}
                 onClick={() => {
+                  if (item.id !== "03") {
+                    toggleMenu()
+                  }
                   handleItemClick(item.id)
-                  toggleMenu()
+                  handleDropMenu(item.id)
                 }}
               >
                 {item.titleAr}
               </Link>
-              {/* {item.id === "03" && <DropMenu show={item.showMenu} />} */}
+
+              {item.id === "03" &&
+                (dropMenu === "03" ? (
+                  <item.icon2 className={styles.icon} />
+                ) : (
+                  <item.icon className={styles.icon} />
+                ))}
             </li>
           ))}
         </ul>
