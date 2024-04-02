@@ -14,18 +14,18 @@ const ServicePackage = () => {
     <div className="secContainer">
       <div className={styles.container}>
         <div
-          className={styles.box_one}
+          className={`${styles.box_one} dark:bg-card color85`}
           onMouseEnter={() => setIsHovered("box_one")}
           onMouseLeave={() => setIsHovered(null)}
         >
           <div className={styles.box_contant}>
             <HiOutlineLightBulb className={styles.icon} />
 
-            <h3>الخدمات البرمجية</h3>
+            <h3 className="dark:text-white">الخدمات البرمجية</h3>
 
             <div className={styles.bar}></div>
 
-            <p>
+            <p className="dark:text-white">
               تصميم وبرمجة التطبيقات والموقع بأحدث التقنيات بأفضل الاسعار وبدعم
               فني مجاني
             </p>
@@ -209,7 +209,7 @@ const ServicePackage = () => {
           </div>
         </div>
 
-        <div className={styles.box_three}>
+        <div className={`${styles.box_three} dark:bg-card color85`}>
           <div
             className={styles.box_contant}
             onMouseEnter={() => setIsHovered("box_three")}
@@ -217,11 +217,11 @@ const ServicePackage = () => {
           >
             <TbWorldSearch className={styles.icon} />
 
-            <h3>الخدمات التسويقية</h3>
+            <h3 className="dark:text-white">الخدمات التسويقية</h3>
 
             <div className={styles.bar}></div>
 
-            <p>
+            <p className="dark:text-white">
               التسويق هو أساس أي مشروع لذالك لدينا امهر المسوقين بخبرات عالية
               ولدينا عدد كبير من مشاهير السوشيال ميديا للتسويق والإعلان
             </p>

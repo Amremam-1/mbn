@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +13,7 @@
 
 body {
   font-size: 1rem;
-  font-family: "Cairo", sans-serif;
+  font-family: "Cairo", sans-serif !important;
   font-size: 16px;
   font-weight: 400;
   color: $black;
@@ -298,4 +299,13 @@ body::-webkit-scrollbar-thumb {
   .react-multi-carousel-dot--active button {
     background: $primary;
   }
+}
+
+// class colors
+.color84 {
+  color: #848484;
+}
+
+.color85 {
+  background: #f7f7ff;
 }

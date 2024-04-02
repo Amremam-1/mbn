@@ -5,15 +5,24 @@
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  color: $black;
+  // color: $black;
 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   &.whiteBackground {
     background-color: #fff;
+
+    .navList {
+      color: #000 !important;
+    }
+
+    .appsIcon {
+      color: #000 !important;
+    }
   }
 
   .container {

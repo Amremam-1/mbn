@@ -16,7 +16,7 @@ const Info = () => {
             <div className="bar"></div>
           </div>
 
-          <div className={styles.about_text}>
+          <div className={`${styles.about_text}`}>
             <PiMedalLight className={styles.icon} />
 
             <div className={styles.text}>

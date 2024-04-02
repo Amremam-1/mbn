@@ -120,7 +120,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${scrollHeader} `}>
+      <header className={`${styles.header} ${scrollHeader} dark:bg-dark`}>
         <div className={`${styles.container} secContainer`}>
           <div className={styles.logo}>
             <Image
@@ -132,7 +132,7 @@ const Header = () => {
             />
           </div>
           <nav className={styles.nav}>
-            <ul className={styles.navList}>
+            <ul className={`${styles.navList} dark:text-white`}>
               {navItems.map((item) => (
                 <li
                   className={`${styles.navItem}`}
@@ -166,8 +166,10 @@ const Header = () => {
               <ThemeToggle />
             </div>
             <div className={styles.apps} onClick={handleDropApps}>
-              <button className={`${styles.appsBtn} dark:text-white`}>
-                <IoAppsOutline className={styles.appsIcon} />
+              <button className={`${styles.appsBtn}`}>
+                <IoAppsOutline
+                  className={`${styles.appsIcon} dark:text-white`}
+                />
               </button>
 
               {dropApps && (

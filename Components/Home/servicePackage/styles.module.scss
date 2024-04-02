@@ -23,7 +23,7 @@
   // style boxOne & boxTwo
   .box_one,
   .box_three {
-    background: $boxService;
+    // background: $boxService;
     cursor: pointer;
     transition: 0.5s;
     position: relative;
@@ -39,7 +39,7 @@
       }
       h3 {
         margin-top: 5px;
-        color: black;
+        // color: black;
         font-size: 22px;
         font-weight: 700;
       }

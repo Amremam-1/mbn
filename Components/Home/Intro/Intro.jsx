@@ -7,9 +7,9 @@ const Intro = () => {
       <div className="secContainer">
         <div className={styles.container}>
           <div className={styles.intro}>
-            <div className={`${styles.main_banner} dark:text-white`}>
-              <h1>مجموعة ماهر بن نايف التجارية</h1>
-              <p>
+            <div className={styles.main_banner}>
+              <h1 className="dark:text-white">مجموعة ماهر بن نايف التجارية</h1>
+              <p className="color84 dark:text-white">
                 نقدم لكم خدماتنا التقنية والفنية والتسويقية من أمهر الكوادر
                 الشابه لفروعنا في المملكة العربية السعودية وجمهورية مصر العربية
                 وماليزيا وهدفنا هو تقديم كل ماهو جديد وعصري لخدمة عملائنا

@@ -16,7 +16,8 @@ module.exports = {
 
       colors: {
         dark: "#000",
-        medium: "#000",
+        // meduim: "#fff",
+        card: "#111",
       },
     },
   },
