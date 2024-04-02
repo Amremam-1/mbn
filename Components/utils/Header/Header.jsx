@@ -159,12 +159,12 @@ const Header = () => {
             </div>
           </nav>
           <div className={styles.btns}>
-            <div className={styles.modes}>
-              {/* <button className={styles.lightModeBtn}>
+            <ThemeToggle />
+            {/* <div className={styles.modes}>
+              <button className={styles.lightModeBtn}>
                 <MdOutlineLightMode className={styles.lightModeIcon} />
-              </button> */}
-              <ThemeToggle />
-            </div>
+              </button>
+            </div> */}
             <div className={styles.apps} onClick={handleDropApps}>
               <button className={`${styles.appsBtn}`}>
                 <IoAppsOutline
