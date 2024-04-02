@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
+// import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
 import { useState, useEffect } from "react"
 import { FaMoon } from "react-icons/fa"
 import { BsSunFill } from "react-icons/bs"
