@@ -47,7 +47,7 @@ const Mechanism = () => {
     <div className="secContainer fixed">
       <div className={styles.shape_circle}>
         <Image
-          className={styles.image}
+          className={`${styles.image} dark:opacity-10`}
           src={"/images/shape-img2.png"}
           width={305}
           height={600}
@@ -58,7 +58,7 @@ const Mechanism = () => {
       <div className={styles.container}>
         <div className={`${styles.Title} conTitle`}>
           <span>آالية العمل</span>
-          <h2>طرق سهلة للاستعداد لعملك</h2>
+          <h2 className="dark:text-white">طرق سهلة للاستعداد لعملك</h2>
           <div className="bar"></div>
         </div>
 
@@ -87,8 +87,10 @@ const Mechanism = () => {
                 </div>
 
                 <div className={styles.content_process}>
-                  <h3>{item.title}</h3>
-                  <span>{item.subtitle}</span>
+                  <h3 className="dark:text-white">{item.title}</h3>
+                  <span className=" dark:text-white color:84">
+                    {item.subtitle}
+                  </span>
                 </div>
               </div>
             </div>

@@ -67,7 +67,7 @@ const ServiceContent = () => {
       <div className={styles.container}>
         <div className="conTitle">
           <span>ماذا نقدم ؟</span>
-          <h2>خدماتنا</h2>
+          <h2 className="dark:text-white">خدماتنا</h2>
           <div className="bar"></div>
         </div>
 
@@ -75,12 +75,15 @@ const ServiceContent = () => {
           {Content.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <Link href={item.link}>
-              <div className={styles.single_services} key={index}>
+              <div
+                className={`${styles.single_services} color85 dark:bg-card `}
+                key={index}
+              >
                 <div className={styles.item}>
-                  <span>
+                  <span className="dark:bg-dark white">
                     <item.icon className={styles.icon} />
                   </span>
-                  <h3>{item.title}</h3>
+                  <h3 className="dark:text-white">{item.title}</h3>
                   <item.arrow className={styles.arrow} />
                 </div>
               </div>

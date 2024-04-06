@@ -73,7 +73,7 @@ const Opinions = () => {
         <div className={styles.right_info}>
           <div className="conTitle">
             <span>ماذا يقول العميل عنا ؟</span>
-            <h2>آراء العملاء</h2>
+            <h2 className="dark:text-white">آراء العملاء</h2>
             <div className="bar"></div>
           </div>
 
@@ -92,7 +92,7 @@ const Opinions = () => {
                 </div>
                 <p>{opinion.comment}</p>
                 <div className={styles.client}>
-                  <h3>{opinion.client}</h3>
+                  <h3 className="dark:text-white">{opinion.client}</h3>
                   <span>{opinion?.titleClient}</span>
                 </div>
               </div>

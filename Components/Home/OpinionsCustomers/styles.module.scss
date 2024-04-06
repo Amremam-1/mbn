@@ -77,11 +77,12 @@
 
       .icon {
         color: #e7e7e7;
+        opacity: 0.7;
         font-size: 80px;
       }
     }
     p {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 0;
       font-size: 16px;
       font-style: italic;
@@ -95,9 +96,9 @@
 
       h3 {
         margin: 0;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
-        color: black;
+        // color: black;
       }
 
       span {

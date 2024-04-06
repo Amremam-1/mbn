@@ -88,13 +88,13 @@ const CompletedProjects = () => {
   }
 
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} color84`}>
       <div className="secContainer">
         <div className={styles.container}>
           <div>
             <div className={`${styles.Title} conTitle`}>
               <span>مشاريعنا المنجزة</span>
-              <h2>أحدث أعمالنا</h2>
+              <h2 className="dark:text-white">أحدث أعمالنا</h2>
               <div className="bar"></div>
             </div>
             <Link href="">
@@ -132,11 +132,15 @@ const CompletedProjects = () => {
                     />
                   </Link>
 
-                  <div className={styles.project_content}>
-                    <h3>
+                  <div
+                    className={`${styles.project_content} color84 dark:bg-card`}
+                  >
+                    <h3 className="dark:text-white">
                       <Link href="#">{item.title}</Link>
                     </h3>
-                    <span>{item.subtitle}</span>
+                    <span className="color84 dark:text-white">
+                      {item.subtitle}
+                    </span>
                   </div>
                 </div>
               </div>
