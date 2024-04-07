@@ -10,7 +10,7 @@ const About = () => {
         <div className={styles.left_info}>
           <div className={styles.title}>
             <span>من نحن</span>
-            <h3 className={styles.sub}>
+            <h3 className={`${styles.sub} dark:text-white`}>
               ماهر بن نايف للإتصالات وتقنية المعلومات للإنتاج التقني والفني
               والخدمات التسويقية
             </h3>
@@ -21,8 +21,10 @@ const About = () => {
             {/* <PiMedalLight className={styles.icon} /> */}
 
             <div className={styles.text}>
-              <h3>تقدم ماهر بن نايف خدماتها المختلفة في مجال التقنية</h3>
-              <p>
+              <h3 className="dark:text-white">
+                تقدم ماهر بن نايف خدماتها المختلفة في مجال التقنية
+              </h3>
+              <p className="color84 dark:text-white">
                 عن طريق مجموعة من أمهر الكوادر بخبرات كبيرة في مجالتهم في كل
                 الفروع للشركة بالمملكة العربية السعودية وجمهورية مصر العربية
                 وماليزيا فنحن متخصصون في تصميم تطبيقات الجوال و الهواتف الذكية

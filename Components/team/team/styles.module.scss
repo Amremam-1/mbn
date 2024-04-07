@@ -79,11 +79,11 @@
             0% 25%
           );
           z-index: -1;
-          background: linear-gradient(
-            267.87deg,
-            #dedddf -36.19%,
-            #f1f0f3 75.48%
-          );
+          // background: linear-gradient(
+          //   267.87deg,
+          //   #dedddf -36.19%,
+          //   #f1f0f3 75.48%
+          // );
           transition: all 0.3s ease;
         }
 
@@ -268,37 +268,37 @@
         }
       }
       .lineTwo {
-        transform: translate(74px, -131px);
+        transform: translate(74px, -133px);
         @media (max-width: 1176px) {
           display: none;
         }
       }
       .lineThree {
-        transform: translate(0px, -176px);
+        transform: translate(0px, -181px);
         @media (max-width: 1176px) {
           display: none;
         }
       }
       .lineFour {
-        transform: translate(73px, -221px);
+        transform: translate(74px, -229px);
         @media (max-width: 1176px) {
           display: none;
         }
       }
       .lineFive {
-        transform: translate(-1px, -267px);
+        transform: translate(0px, -277px);
         @media (max-width: 1176px) {
           display: none;
         }
       }
       .lineSix {
-        transform: translate(-75px, -306px);
+        transform: translate(-74px, -319px);
         @media (max-width: 1176px) {
           display: none;
         }
       }
       .lineSaven {
-        transform: translate(-148px, -345px);
+        transform: translate(-148px, -361px);
         @media (max-width: 1176px) {
           display: none;
         }

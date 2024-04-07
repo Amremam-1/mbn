@@ -14,18 +14,18 @@ const Service = () => {
     <div className="secContainer">
       <div className={styles.container}>
         <div
-          className={styles.box_one}
+          className={`${styles.box_one} color85 dark:bg-card`}
           onMouseEnter={() => setIsHovered("box_one")}
           onMouseLeave={() => setIsHovered(null)}
         >
           <div className={styles.box_contant}>
             <PiMedalLight className={styles.icon} />
 
-            <h3>مهمتنا</h3>
+            <h3 className=" dark:text-white">مهمتنا</h3>
 
             <div className={styles.bar}></div>
 
-            <p>
+            <p className=" dark:text-white">
               ان نقدم جميع خدماتنا بأعلى جودة لمساعدة عمالئنا في الوصول إلى
               أهداف المشاريع الخاصة بهم، عن طريق اتباع خطوات محددة و مدروسة و
               باستخدام لجميع الخدمات التي تقدمها N.B.Mأحدث التقنيات العالمية
@@ -117,7 +117,7 @@ const Service = () => {
           </div>
         </div>
 
-        <div className={styles.box_three}>
+        <div className={`${styles.box_three} color85 dark:bg-card`}>
           <div
             className={styles.box_contant}
             onMouseEnter={() => setIsHovered("box_three")}
@@ -125,11 +125,11 @@ const Service = () => {
           >
             <TbWorldSearch className={styles.icon} />
 
-            <h3>رؤيتنا</h3>
+            <h3 className=" dark:text-white">رؤيتنا</h3>
 
             <div className={styles.bar}></div>
 
-            <p>
+            <p className=" dark:text-white">
               أن نصبح المساعد الرئيسي لجميع المشروعات الصغيرة على النهوض والتقدم
               إلى أهدافها عن طريق فريقنا المتخصص في كل الأعمال التي تقدم
               الارتقاء بالمشروعات الصغيرة من جميع الجوانب

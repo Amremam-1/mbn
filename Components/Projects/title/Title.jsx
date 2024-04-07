@@ -66,9 +66,9 @@ const GridItem = ({ img }) => (
       sizes="100vw"
       loading="lazy"
     />
-    <div className={styles.content}>
-      <h3>{img.title}</h3>
-      <span>{img.subTitle}</span>
+    <div className={`${styles.content} color86 dark:bg-card`}>
+      <h3 className="dark:text-white">{img.title}</h3>
+      <span className="color84 dark:text-white">{img.subTitle}</span>
     </div>
   </>
 )
@@ -84,7 +84,7 @@ const Title = () => {
     <div className="secContainer">
       <div className={styles.container}>
         <div className={`${styles.Title} conTitle`}>
-          <h2>أعمالنا المنجزة</h2>
+          <h2 className=" dark:text-white">أعمالنا المنجزة</h2>
           <div className="bar"></div>
         </div>
 
@@ -96,10 +96,10 @@ const Title = () => {
                   onClick={() => handleBtn(item.id)}
                   className={`${styles.navigation} ${
                     activeBtn === item.id ? styles.active : ""
-                  }`}
+                  } dark:bg-card color86`}
                   key={item.btnbar}
                 >
-                  <span>{item.btnbar}</span>
+                  <span className="dark:text-white">{item.btnbar}</span>
                 </button>
               ))}
             </div>

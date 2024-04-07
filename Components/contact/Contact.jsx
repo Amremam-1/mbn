@@ -10,7 +10,7 @@ const Contact = () => {
       <div className={styles.container}>
         <div className={`${styles.Title} conTitle`}>
           <span>نحن هنا لمساعدتك</span>
-          <h2>تواصل معانا</h2>
+          <h2 className="dark:text-white">تواصل معانا</h2>
         </div>
 
         <div className={styles.uk_grid}>
@@ -45,8 +45,6 @@ const Contact = () => {
                   <p className={styles.desc}>جدة - الخالدية - برج الغيداء</p>
                 </div>
               </div>
-
-              
             </div>
           </div>
 
@@ -67,7 +65,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className={styles.uk_input}
+                  className={`${styles.uk_input} color87 dark:bg-card`}
                   placeholder="الاسم بالكامل"
                 />
               </div>
@@ -76,7 +74,7 @@ const Contact = () => {
                   type="text"
                   name="email"
                   id="email"
-                  className={styles.uk_input}
+                  className={`${styles.uk_input} color87 dark:bg-card`}
                   placeholder="البريد الالكتروني"
                 />
               </div>
@@ -85,7 +83,7 @@ const Contact = () => {
                   type="number"
                   name="phone"
                   id="phone"
-                  className={styles.uk_input}
+                  className={`${styles.uk_input} color87 dark:bg-card`}
                   placeholder="رقم الهاتف"
                 />
               </div>
@@ -94,7 +92,7 @@ const Contact = () => {
                   type="text"
                   name="subject"
                   id="subject"
-                  className={styles.uk_input}
+                  className={`${styles.uk_input} color87 dark:bg-card`}
                   placeholder="الموضوع"
                 />
               </div>
@@ -104,7 +102,7 @@ const Contact = () => {
                   id="message"
                   cols="30"
                   rows="4"
-                  className={styles.uk_textarea}
+                  className={`${styles.uk_textarea} color87 dark:bg-card`}
                   placeholder="رسالتك"
                 ></textarea>
               </div>
