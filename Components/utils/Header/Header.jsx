@@ -120,7 +120,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`${styles.header} ${scrollHeader} dark:bg-dark`}>
+      <header className={`${styles.header} ${scrollHeader}`}>
         <div className={`${styles.container} secContainer`}>
           <div className={styles.logo}>
             <Image
