@@ -104,10 +104,10 @@ const ServiceDetail = () => {
       <div className={styles.container}>
         <div className={styles.uk_grid}>
           <div className={styles.uk_sidebar}>
-            <div className={styles.widget_search}>
+            <div className={`${styles.widget_search} white dark:bg-card`}>
               <form>
                 <input
-                  className={styles.uk_input}
+                  className={`${styles.uk_input} dark:bg-card dark:border-dark border51`}
                   type="text"
                   value={searchQuery}
                   placeholder="بحث هنا .."
@@ -128,7 +128,7 @@ const ServiceDetail = () => {
                     }}
                     className={`${styles.list} ${
                       activeService === item.id ? styles.active : ""
-                    }`}
+                    } dark:bg-card dark:border-b-dark border50`}
                   >
                     <span>{item.title}</span>
                     <item.arrow className={styles.arrow} />
@@ -138,8 +138,8 @@ const ServiceDetail = () => {
             </div>
           </div>
           <div className={styles.inner}>
-            <h3>خدمات التسويق اإللكتروني</h3>
-            <p>
+            <h3 className="dark:text-white">خدمات التسويق اإللكتروني</h3>
+            <p className="color84 dark:text-white">
               حقق نشر نشاطك بوضع خطة تسويقية تقدمها لك أم بي أن بشكل مجاني ونقوم
               بترشيح ممن يتناسب مع نشاطك من مشاهير وحسابات سوشيال ميديا فعاله
               ونقوم بتقديم اسماء المشاهير واحصائيات المشاهدات لديهم بالاضافة الى

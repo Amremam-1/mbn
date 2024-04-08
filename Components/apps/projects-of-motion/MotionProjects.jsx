@@ -197,7 +197,7 @@ const MotionProjects = () => {
                     </Link>
                   </h3>
                   <ul>
-                    <li className="color84 dark:opacity-70 dark:text-white">
+                    <li className="color84  dark:text-white">
                       {item.subtitle}
                     </li>
                   </ul>

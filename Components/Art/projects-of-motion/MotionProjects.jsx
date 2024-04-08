@@ -152,7 +152,7 @@ const MotionProjects = () => {
       <div className={styles.container}>
         <div className={`${styles.Title} conTitle`}>
           <span>الانتاج الفني</span>
-          <h2>أعمالنا</h2>
+          <h2 className="dark:text-white">أعمالنا</h2>
           <div className="bar"></div>
         </div>
 
@@ -171,13 +171,21 @@ const MotionProjects = () => {
                   />
                 </div>
 
-                <div className={styles.project_content}>
-                  <h3>
+                <div
+                  className={`${styles.project_content} color89 dark:bg-card`}
+                >
+                  <h3 className="dark:text-white">
                     <Link href={item.link}>{item.title}</Link>
                   </h3>
                   <ul>
-                    <li>{item.subtitle1}</li>
-                    <li className={styles.line}> {item.subtitle2}</li>
+                    <li className="color84 dark:text-white">
+                      {item.subtitle1}
+                    </li>
+                    <li
+                      className={`${styles.line} color84 dark:opacity-70 dark:text-white`}
+                    >
+                      {item.subtitle2}
+                    </li>
                   </ul>
                 </div>
               </div>
