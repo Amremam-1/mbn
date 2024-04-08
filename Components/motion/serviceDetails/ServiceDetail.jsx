@@ -104,10 +104,10 @@ const ServiceDetail = () => {
       <div className={styles.container}>
         <div className={styles.uk_grid}>
           <div className={styles.uk_sidebar}>
-            <div className={styles.widget_search}>
+            <div className={`${styles.widget_search} white dark:bg-card`}>
               <form>
                 <input
-                  className={styles.uk_input}
+                  className={`${styles.uk_input} dark:bg-card dark:border-dark border51`}
                   type="text"
                   value={searchQuery}
                   placeholder="بحث هنا .."
@@ -128,7 +128,7 @@ const ServiceDetail = () => {
                     }}
                     className={`${styles.list} ${
                       activeService === item.id ? styles.active : ""
-                    }`}
+                    } dark:bg-card dark:border-b-dark border50 `}
                   >
                     <span>{item.title}</span>
                     <item.arrow className={styles.arrow} />
@@ -138,8 +138,8 @@ const ServiceDetail = () => {
             </div>
           </div>
           <div className={styles.inner}>
-            <h3>موشن جرافيك</h3>
-            <p>
+            <h3 className="dark:text-white">موشن جرافيك</h3>
+            <p className="color84 dark:text-white">
               خدمة موشن جرافيك اعلان وشرح الخدمات بتصميم الموشن جرافيك وهي من
               اهم الأفكار المبسطة والغير مكلفة مادياً للإعلان وشرح الخدمات
               للعملاء والتي تشمل رسم الخطط والشخصيات بهدف توضيح و تبسيط
@@ -174,15 +174,15 @@ const ServiceDetail = () => {
             </div>
 
             <ul className={styles.services_features_list}>
-              <li>
+              <li className="dark:text-white">
                 <IoCheckmark className={styles.check} />
                 تنفيذ العمل
               </li>
-              <li>
+              <li className="dark:text-white">
                 <IoCheckmark className={styles.check} />
                 كتابة السيناريو
               </li>
-              <li>
+              <li className="dark:text-white">
                 <IoCheckmark className={styles.check} />
                 صناعة الفكرة
               </li>

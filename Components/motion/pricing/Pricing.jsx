@@ -3,20 +3,22 @@ import Link from "next/link"
 
 const Pricing = () => {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} color89  dark:bg-dark`}>
       <div className="secContainer">
         <div className={styles.container}>
           <div className={`${styles.Title} conTitle`}>
-            <h2>الاسعار</h2>
+            <h2 className="dark:text-white">الاسعار</h2>
             <span>تقدم هذه الاسعار بخصم 50% بمناسبة اليوم الوطني السعودي</span>
             <div className={`${styles.barbro} bar`}></div>
           </div>
 
           <div className={styles.uk_grid}>
             <div className={styles.item}>
-              <div className={styles.single_pricing_box}>
+              <div
+                className={`${styles.single_pricing_box} dark:bg-card dark:shadow-none shadow11`}
+              >
                 <div className={styles.pricing_header}>
-                  <h3>غير شامل تعليق صوتي</h3>
+                  <h3 className="dark:text-white">غير شامل تعليق صوتي</h3>
                 </div>
                 <div className={styles.price}>
                   $10
@@ -88,9 +90,11 @@ const Pricing = () => {
             </div>
 
             <div className={styles.item}>
-              <div className={styles.single_pricing_box}>
+              <div
+                className={`${styles.single_pricing_box} dark:bg-card dark:shadow-none shadow11`}
+              >
                 <div className={styles.pricing_header}>
-                  <h3>شآمل اعلى من دقيقة</h3>
+                  <h3 className="dark:text-white">شآمل اعلى من دقيقة</h3>
                 </div>
                 <div className={styles.price}>
                   $13
@@ -110,7 +114,9 @@ const Pricing = () => {
                 </div>
 
                 <Link href={""}>
-                  <button className={`btn ${styles.contact}`}>احجز الان</button>
+                  <button className={`btn ${styles.contact} dark:btnDark`}>
+                    احجز الان
+                  </button>
                 </Link>
               </div>
             </div>

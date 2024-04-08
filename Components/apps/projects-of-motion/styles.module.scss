@@ -6,7 +6,7 @@
   .wrapper {
     display: flex;
     flex-wrap: wrap;
-
+    margin-top: 40px;
     @media (max-width: 1130px) {
       justify-content: space-between;
     }
@@ -51,7 +51,7 @@
           text-align: center;
           display: flex;
           flex-direction: column;
-          background-color: #f9f9f9;
+          // background-color: #f9f9f9;
           padding: 18px 12px;
           -webkit-transition: 0.5s;
           transition: 0.5s;
@@ -83,7 +83,7 @@
             transition: 0.5s;
             font-size: 17px;
             font-weight: 700;
-            color: #000000;
+            // color: #000000;
             line-height: 1.4;
           }
 
@@ -99,7 +99,7 @@
               margin: 0 8px;
               -webkit-transition: 0.5s;
               transition: 0.5s;
-              color: #848484;
+              // color: #848484;
               position: relative;
             }
 

@@ -35,7 +35,7 @@ const BoxService = () => {
     <div className="secContainer">
       <div className={styles.container}>
         <div className={`${styles.Title} conTitle`}>
-          <h2>أنظمة التطبيقات</h2>
+          <h2 className="dark:text-white">أنظمة التطبيقات</h2>
           <div className="bar"></div>
         </div>
 
