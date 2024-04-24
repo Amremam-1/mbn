@@ -159,7 +159,7 @@ const Header = () => {
             </div>
           </nav>
           <div className={styles.btns}>
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
             {/* <div className={styles.modes}>
               <button className={styles.lightModeBtn}>
                 <MdOutlineLightMode className={styles.lightModeIcon} />
