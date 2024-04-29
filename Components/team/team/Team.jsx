@@ -8,8 +8,8 @@ const Team = () => {
       <div className={styles.main_container}>
         <div className={styles.main_wrapper}>
           <div className={styles.honeycomb_right}>
-            <div className={`${styles.honeycomb_cell}`}>
-              <div className={styles.honeycomb_title}>
+            <div className="honeycomb_cell">
+              <div className="honeycomb_title">
                 <h3>
                   <span>MAHER</span> BIN NAIF
                 </h3>
