@@ -56,7 +56,7 @@ const usefulLinks = [
         display: "اتصل بنا",
       },
       {
-        href: "",
+        href: "/cvs",
         display: "طلب توظيف",
       },
       {
