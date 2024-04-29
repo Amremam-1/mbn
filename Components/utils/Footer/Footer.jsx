@@ -13,27 +13,27 @@ const services = [
     title: "الخدمات",
     links: [
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/service/motion",
         display: "موشن جرافيك",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/service/apps",
         display: "تصميم مواقع",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/service/marketing",
         display: "تسويق ومشاهير",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/service/art",
         display: "خدمات الانتاج الفني",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/service/product",
         display: "تصوير المنتجات",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/service/fastCart",
         display: "فاست كارت",
       },
     ],
@@ -44,23 +44,23 @@ const usefulLinks = [
     title: "روابط مفيدة",
     links: [
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/about",
         display: "من نحن",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/project",
         display: "الأعمال",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "/contact",
         display: "اتصل بنا",
       },
       {
-        href: "https://mbn2.vercel.app/job-request",
+        href: "",
         display: "طلب توظيف",
       },
       {
-        href: "http://www.mahercp.net/job_request.html#",
+        href: "",
         display: "سياسية الخصوصية",
       },
     ],
