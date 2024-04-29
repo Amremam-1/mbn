@@ -6,7 +6,13 @@ import { IoLocationOutline } from "react-icons/io5"
 import { AiOutlineMail } from "react-icons/ai"
 import { IoIosPhonePortrait } from "react-icons/io"
 import { IoIosArrowUp } from "react-icons/io"
-import BarLine from "@/Components/Home/barLine/BarLine"
+import { FaWhatsapp } from "react-icons/fa"
+import { FaInstagram } from "react-icons/fa6"
+import { IoLogoTiktok } from "react-icons/io5"
+import { FaSnapchatGhost } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
+import { BiLogoGmail } from "react-icons/bi"
+import Link from "next/link"
 
 const services = [
   {
@@ -14,27 +20,27 @@ const services = [
     links: [
       {
         href: "/service/motion",
-        display: "موشن جرافيك",
+        display: "#موشن_جرافيك",
       },
       {
         href: "/service/apps",
-        display: "تصميم مواقع",
+        display: "#تصميم_مواقع",
       },
       {
         href: "/service/marketing",
-        display: "تسويق ومشاهير",
+        display: "#تسويق_ومشاهير",
       },
       {
         href: "/service/art",
-        display: "خدمات الانتاج الفني",
+        display: "#خدمات_الانتاج_الفني",
       },
       {
         href: "/service/product",
-        display: "تصوير المنتجات",
+        display: "#تصوير_المنتجات",
       },
       {
         href: "/service/fastCart",
-        display: "فاست كارت",
+        display: "#فاست_كارت",
       },
     ],
   },
@@ -67,6 +73,38 @@ const usefulLinks = [
   },
 ]
 
+const social = [
+  {
+    id: "01",
+    icon: FaWhatsapp,
+    link: "https://api.whatsapp.com/send/?phone=%2B9660502505095&text&type=phone_number&app_absent=0",
+  },
+  {
+    id: "02",
+    icon: FaInstagram,
+    link: "https://www.instagram.com/mbn_cp/?igshid=MzRlODBiNWFlZA%3D%3D",
+  },
+  {
+    id: "03",
+    icon: IoLogoTiktok,
+    link: "https://www.tiktok.com/@mbn_cp?_t=8figzcxh02d&_r=1",
+  },
+  {
+    id: "04",
+    icon: FaSnapchatGhost,
+    link: "https://www.snapchat.com/add/mbn_cp?share_id=O0udupOfi8U&locale=ar-SA",
+  },
+  {
+    id: "05",
+    icon: FaXTwitter,
+    link: "https://twitter.com/i/flow/login?redirect_after_login=%2Fmbn_cp",
+  },
+  {
+    id: "06",
+    icon: BiLogoGmail,
+    link: "mbn.sm2020@gmail.com [undefined:mbn.sm2020@gmail.com]",
+  },
+]
 const Footer = () => {
   const date = new Date().getFullYear()
 
@@ -90,6 +128,16 @@ const Footer = () => {
             loading="lazy"
           />
           <p>ماهر بن نايف للإنتاج التقني والفني والخدمات التسويقية</p>
+
+          <div className={styles.socails}>
+            <ul className={styles.iconsMedia}>
+              {social.map((item) => (
+                <Link href={item.link} className={styles.icon} key={item.id}>
+                  <item.icon className={styles.item} />
+                </Link>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className={styles.servcies}>

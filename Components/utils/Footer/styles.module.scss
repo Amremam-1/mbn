@@ -68,6 +68,34 @@
     color: #d6d6d6;
     line-height: 1.9;
   }
+
+  .socails {
+    margin-top: 20px;
+    .iconsMedia {
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 30px;
+        height: 30px;
+        margin-inline-end: 10px;
+        border-radius: 50%;
+        background: #f6941d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        cursor: pointer;
+        .item {
+          font-size: 20px;
+        }
+
+        &:hover {
+          background: #fff;
+          color: #151515;
+        }
+      }
+    }
+  }
 }
 
 .services,
