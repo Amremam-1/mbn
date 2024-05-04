@@ -231,7 +231,7 @@ const projects = [
   },
   {
     image: "/images/غلاف فديو/mbn.png",
-    title: "",
+    title: "MBN",
     link: "",
     subtitle1: "اعلان موشن جرافيك",
     subtitle2: "اعمال M11 للانتاج الفني",
