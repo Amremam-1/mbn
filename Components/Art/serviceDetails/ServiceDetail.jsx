@@ -44,24 +44,30 @@ const content = [
   },
   {
     id: "05",
+    title: "تصميم بوسترات اعلانيه",
+    arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/art",
+  },
+  {
+    id: "06",
     title: "تصوير المنتجات",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/product",
   },
   {
-    id: "06",
+    id: "07",
     title: "دراسة المشاريع التقنية",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/technique",
   },
   {
-    id: "07",
+    id: "08",
     title: "فاست كارت",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/fastCart",
   },
   {
-    id: "08",
+    id: "09",
     title: "إداره سوشيال ميديا",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/management",
@@ -138,7 +144,7 @@ const ServiceDetail = () => {
             </div>
           </div>
           <div className={styles.inner}>
-            <h3 className="dark:text-white">خدمات التصوير واالنتاج الفني</h3>
+            <h3 className="dark:text-white">خدمات التصوير والانتاج الفني</h3>
             <p className="color84 dark:text-white">
               يقوم فريق مجموعة ماهر بن نايف القسم الفني بتوفير خدمات عدة في
               الانتاج الفني لخدمة المنشآت والقطاعات الحكومية والأهلية والأفراد

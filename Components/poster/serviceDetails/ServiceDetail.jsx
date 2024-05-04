@@ -73,8 +73,9 @@ const content = [
     link: "/service/management",
   },
 ]
+
 const ServiceDetail = () => {
-  const [activeService, setActiveService] = useState("03")
+  const [activeService, setActiveService] = useState("05")
   const [searchQuery, setSearchQuery] = useState("")
 
   const handleService = (idService) => {
@@ -143,17 +144,13 @@ const ServiceDetail = () => {
             </div>
           </div>
           <div className={styles.inner}>
-            <h3 className="dark:text-white">خدمات التسويق اإللكتروني</h3>
+            <h3 className="dark:text-white">خدمات التصميم والبوسترات الاعلانيه</h3>
             <p className="color84 dark:text-white">
-              حقق نشر نشاطك بوضع خطة تسويقية تقدمها لك أم بي أن بشكل مجاني ونقوم
-              بترشيح ممن يتناسب مع نشاطك من مشاهير وحسابات سوشيال ميديا فعاله
-              ونقوم بتقديم اسماء المشاهير واحصائيات المشاهدات لديهم بالاضافة الى
-              الاسعار المخفضة التي تتميز بها M.B.N ولذلك لعلاقتها مع ألمع اسماء
-              المشاهير في السوشيال ميديا ويمكن الان طلب الخدمة بتوضيح راس المال
-              المخصص للاعلانات ليتم تقديم الدراسة بشكل دقيق كما تعلم عزيزي
-              التاجر المعلنون كثرة وفيهم من يتقاضى اجر مرتفع جدا وفيهم من تكون
-              اسعاره غير مبالغ وفيها وبناء لراس المال المحدد من قبلك يتم تقديم
-              خطة اعلانية تتناسب مع الميزانية المخصصة
+              يتفرد فريق مجموعة ماهر بن نايف القسم الفني بتقديم خدمة تصميم
+              بوسترات إعلانية مبتكرة ومتميزة. دعنا نساعدك في إبراز فريدة منتجاتك
+              وخدماتك من خلال تصاميم تلفت الأنظار وتعزز هويتك التجارية بأسلوب
+              متميز وجذاب. ابدأ اليوم في جعل علامتك التجارية تبرز في عالم
+              الإعلانات بتصاميم تفوق التوقعات.
             </p>
 
             <div className={styles.services_images_slider}>
@@ -184,15 +181,15 @@ const ServiceDetail = () => {
             </div>
 
             <ul className={styles.services_features_list}>
-              <li>
+              <li className="dark:text-white">
                 <IoCheckmark className={styles.check} />
                 تنفيذ العمل
               </li>
-              <li>
+              <li className="dark:text-white">
                 <IoCheckmark className={styles.check} />
                 كتابة السيناريو
               </li>
-              <li>
+              <li className="dark:text-white">
                 <IoCheckmark className={styles.check} />
                 صناعة الفكرة
               </li>

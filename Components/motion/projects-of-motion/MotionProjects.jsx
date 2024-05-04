@@ -52,6 +52,28 @@ const projects = [
     subtitle1: "اعلان موشن جرافيك",
     subtitle2: "تطبيقات",
   },
+
+  {
+    image: "",
+    title: "",
+    link: "",
+    subtitle1: "اعلان موشن جرافيك",
+    subtitle2: "تطبيقات",
+  },
+  {
+    image: "",
+    title: "",
+    link: "",
+    subtitle1: "اعلان موشن جرافيك",
+    subtitle2: "تطبيقات",
+  },
+  {
+    image: "",
+    title: "",
+    link: "",
+    subtitle1: "اعلان موشن جرافيك",
+    subtitle2: "تطبيقات",
+  },
 ]
 
 const MotionProjects = () => {

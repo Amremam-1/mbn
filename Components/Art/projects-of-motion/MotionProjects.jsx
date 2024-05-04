@@ -144,6 +144,77 @@ const projects = [
     subtitle1: "الموقع قيد التطوير soon ",
     subtitle2: "اعمال M11 للانتاج الفني",
   },
+
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
+  {
+    image: "",
+    title: " ",
+    link: "",
+    subtitle1: "",
+    subtitle2: "",
+  },
 ]
 
 const MotionProjects = () => {

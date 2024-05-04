@@ -35,24 +35,30 @@ const navLinks = [
   },
   {
     id: "05",
+    titleAr: "تصميم بوسترات اعلانيه",
+    titleEn: "",
+    link: "/service/poster",
+  },
+  {
+    id: "06",
     titleAr: "تصوير منتجات",
     titleEn: "",
     link: "/service/product",
   },
   {
-    id: "06",
+    id: "07",
     titleAr: "دراسة المشاريع التقنية",
     titleEn: "",
     link: "/service/technique",
   },
   {
-    id: "07",
+    id: "08",
     titleAr: "فاست كارت",
     titleEn: "",
     link: "/service/fastCart",
   },
   {
-    id: "08",
+    id: "09",
     titleAr: "إدارة المشاريع ميديا",
     titleEn: "",
     link: "/service/management",

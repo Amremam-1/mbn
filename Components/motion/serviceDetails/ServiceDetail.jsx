@@ -44,24 +44,30 @@ const content = [
   },
   {
     id: "05",
+    title: "تصميم بوسترات اعلانيه",
+    arrow: HiOutlineArrowNarrowLeft,
+    link: "/service/art",
+  },
+  {
+    id: "06",
     title: "تصوير المنتجات",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/product",
   },
   {
-    id: "06",
+    id: "07",
     title: "دراسة المشاريع التقنية",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/technique",
   },
   {
-    id: "07",
+    id: "08",
     title: "فاست كارت",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/fastCart",
   },
   {
-    id: "08",
+    id: "09",
     title: "إداره سوشيال ميديا",
     arrow: HiOutlineArrowNarrowLeft,
     link: "/service/management",
